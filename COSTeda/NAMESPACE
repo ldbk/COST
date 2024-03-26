@@ -1,0 +1,61 @@
+import("utils","graphics","lattice","nnet","tcltk","tcltk2")
+
+importClassesFrom("COSTcore")
+importFrom("COSTcore")
+           
+export(
+"agelenPlot",
+"lengthHist",
+"convert.statsq.lat.lon",
+"convert.lon.lat.statsq",
+"convert.icesarea.statsq",
+"convert.statsq.icesarea",
+"convert.icesarea.lat.lon",
+"ices.division.lines",
+"ices.division.names",
+"is.statsq",
+"mergecsData",
+"subSetSpp",
+"subSetTrip",
+"subSetProj",
+"subSetTarget",
+"subSetGear",
+"convert.samplingarea.statsq",
+"convert.statsq.samplingarea",
+"demersal.sampling.lines",
+#  "check.fields",
+#  "convert.statsq.lat.lon",
+#  "convert.icesarea.statsq",
+#  "convert.icesarea.lat.lon",
+#  "ices.division.lines",
+#  "ices.division.names",
+#  "is.statsq",
+#  "landmass.polygons",
+#  "mergecsData",
+#  "space.plot",
+#  "strata.space.plot",
+  "tabConsist",
+  "dfApply"
+)
+
+exportClasses(
+  "edaResult"
+)
+
+exportMethods(
+	"ageLenMulti",
+	"relativeValue",
+  "plot",
+  "boxplot",
+	"deltCalc",
+	"lenDisPlot",
+  "landisVol",
+  "bioPar.plot",
+  "bioPar.boxplot",
+  "csPlot.design",
+  "cstSummary",
+  "disInfo",
+  "spacePlot",
+  "disCorrPlot",
+  "controlMap"
+)

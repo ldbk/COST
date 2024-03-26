@@ -1,0 +1,29 @@
+\HeaderA{trueData}{Class "trueData"}{trueData}
+\keyword{classes}{trueData}
+\begin{Description}\relax
+The trueData class stores the true data set
+\end{Description}
+\begin{Section}{Objects from the Class}
+The creator function \code{trueData} can be called to create objects from this class.
+\end{Section}
+\begin{Section}{Slots}
+\Tabular{lrl}{
+\bold{slot} & \bold{class} & \bold{description} \\
+\bold{\code{desc}} & \code{character} & object description \\
+\bold{\code{species}} & \code{character} & species description (recall of SL\$spp (+ SL\$sex)) \\
+\bold{\code{strataDesc}} & \code{StrIni} & time, space and technical stratification considered \\
+\bold{\code{lal}} & \code{data.frame} & true landings at age \\
+\bold{\code{laa}} & \code{data.frame} & true landings at length \\
+\bold{\code{dal}} & \code{data.frame} & true discards at length \\
+\bold{\code{dtw}} & \code{data.frame} & true discards total weight \\  
+}
+\end{Section}
+\begin{Author}\relax
+Dorleta García \email{dgarcia@azti.es}
+\end{Author}
+\begin{Examples}
+\begin{ExampleCode}
+showclass("trueData")
+\end{ExampleCode}
+\end{Examples}
+

@@ -1,0 +1,68 @@
+alkLgthRecSim            package:COSTsim            R Documentation
+
+_M_e_t_h_o_d _f_o_r _m_a_n_a_g_i_n_g _g_a_p_s _i_n _a_g_e-_l_e_n_g_t_h _k_e_y_s _f_o_r _s_i_m_u_l_a_t_e_d _d_a_t_a _s_e_t_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This function is the counterpart of the 'alkLgthRec' function  for
+     'simDataCons' objects. It provides various methods to solve alk
+     gaps problems.  Input object is updated according to chosen
+     method(s) (grouped/recoded length classes, addition of 'virtual'
+     individuals,...)
+
+_U_s_a_g_e:
+
+     alkLgthRecSim(object,type="stepIncr",value,preview=FALSE,postview=TRUE,update=FALSE,...)
+
+_A_r_g_u_m_e_n_t_s:
+
+  object: A 'simDataCons' object with simulated data sets
+
+    type: Character for chosen method. Values are :
+
+     "_s_t_e_p_I_n_c_r" Default parameter. Length class step is increased to
+          specified 'value' parameter (default value=10)
+
+     "_f_i_l_l_M_i_s_s" All gaps (with size <= value) are filled out with the
+          sum of surrounding recorded classes (default value=1)
+
+     "_s_F_i_l_l_M_i_s_s" The 'value' empty classe(s) prior to first recorded
+          length class is filled out with the latter (default value=1)
+
+     "_l_F_i_l_l_M_i_s_s" The 'value' empty classe(s) following last recorded
+          length class is filled out with the latter (default value=1)  
+
+   value: Numerical parameter for chosen method (see 'type').
+
+ preview: Logical. If 'TRUE', original age length key is displayed.
+
+postview: Logical. If 'TRUE', new age length key is displayed.
+
+  update: Logical. If 'TRUE', 'csDataCons' object is updated in
+          accordance with chosen method, and then returned.  If
+          'FALSE', descriptive elements about updated alk are returned
+          (see 'values'), but input object remains unchanged.
+
+     ...: Further arguments, and particularly a 'start' numerical
+          parameter specifying the first considered length class when
+          recoding (only useful for 'type="stepIncr"').  Default value
+          is the minimum aged length class in 'ca' table.
+
+_V_a_l_u_e:
+
+     If 'update=FALSE', returned elements within '@samples' of the
+     'simDataCons' object are : '$alk' is the raw resulting age-length
+     key, '$propMiss' are short statistics about gaps (see
+     'propMissLgthCons' method),  '$lgthCls' is a description of length
+     classes recoding for 'stepIncr', 'sExtrGrp' and 'lExtrGrp' methods
+     and '$addIndTab' is a description of added virtual individuals 
+     for other methods.
+
+_A_u_t_h_o_r(_s):
+
+     Dorleta garcia dgarcia@azti.es
+
+_S_e_e _A_l_s_o:
+
+     'alkLgthRec'
+

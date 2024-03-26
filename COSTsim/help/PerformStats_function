@@ -1,0 +1,36 @@
+PerformStats             package:COSTsim             R Documentation
+
+_M_e_t_h_o_d _f_o_r _c_o_m_p_u_t_i_n_g _p_e_r_f_o_r_m_a_n_c_e _s_t_a_t_i_s_t_i_c_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     The function computes the performance statistics to evaluate
+     accuracy, bias and precision of different estimators. The outcome 
+     object is of the performStats class.
+
+_U_s_a_g_e:
+
+     performStats(estSimObj, trueDataObj, desc, nSamples)
+
+_A_r_g_u_m_e_n_t_s:
+
+estSimObj: A dbeOutputSim object
+
+trueDataObj: A trueData object
+
+    desc: Object description
+
+nSamples: Not needed anymore?
+
+_V_a_l_u_e:
+
+     An object of the class performStats
+
+_A_u_t_h_o_r(_s):
+
+     Dorleta García <dgarcia@azti.es>
+
+_S_e_e _A_l_s_o:
+
+     'PerformStats'
+

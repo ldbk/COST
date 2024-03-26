@@ -1,0 +1,29 @@
+PerformStats            Class "PerformStats"
+PerformStats-methods    Method for computing performance statistics
+RaiseAgeBootSim         Estimation of total numbers-at-age from market
+                        sampling with bootstrap variance for simulated
+                        data sets
+RaiseAgeSim             Estimation of total numbers-at-age from market
+                        sampling for simulated data sets
+RaiseLgthBootSim        Estimation of total numbers-at-length from
+                        market sampling with bootstrap variance for
+                        simulated data sets
+RaiseLgthSim            Estimation of total numbers-at-length from
+                        market sampling for simulated data sets
+alkLgthRecSim           Method for managing gaps in age-length keys for
+                        simulated data sets
+costData                Class "costData"
+costDataCons            Class "costDataCons"
+costDataVal             Class "costDataVal"
+dbeCalcSim              CI and CV calculation
+dbeOutputSim            Class "dbeOutputSim"
+fillGaps                Method for completing gaps in simulated data
+                        sets
+simData                 Class "simData"
+simDataCons             Class "simDataCons"
+simDataVal              Class "simDataVal"
+simSamples              Simulation of data sets
+totVolumeSim            Estimation of total volume of discards or/and
+                        landings (weight, number or number-at-length)
+                        of simulated data sets
+trueData                Class "trueData"

@@ -1,0 +1,12 @@
+Package: COSTdbe
+Title: Design-based estimates package for COST.
+Version: 1.4-1
+Date: 2015
+Author: COST Team and various contributors.
+Description: COSTdbe is a package dealing with Design Based Estimates, i.e. considering two sets of methods, analytical issued from the sampling theory (Cochran, 1977) and resampling making use of the bootstrap (Efron and Tibshirani, 1993).
+Depends: R(>= 2.11.1), COSTcore, lattice, boot, methods, tcltk, nnet
+Maintainer: Laurent Dubroca <laurent.dubroca@ifremer.fr>
+License: GPL (>= 2)
+LazyLoad: Yes
+LazyData: Yes
+RoxygenNote: 6.0.1

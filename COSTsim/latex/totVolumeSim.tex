@@ -1,0 +1,39 @@
+\HeaderA{totVolumeSim}{Estimation of total volume of discards or/and landings (weight, number or number-at-length) of simulated data sets}{totVolumeSim}
+\keyword{methods}{totVolumeSim}
+\begin{Description}\relax
+This function is the equivalent to \code{totVolume} for 'simDataCons' class objects. It estimates total volume of discards or/and 
+landings (weight, number or number-at-length) based on various raising methods for simulated data sets.
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+totVolume(dbeOutputSim,simObject,...)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{dbeOutputSim}] A \emph{dbeOutputSim} object. All necessary information for calculation process are taken in the first slots (species, catch category,...). See \emph{dbeObject} method for object initialization.
+\item[\code{simObject}] A \emph{simDataCons} object matching 'dbeOutputSim' specifications.
+\item[\code{...}] Further arguments such as:
+\item[type] Specification of the raising method : \code{"trip"} (default value) for raising by trip, \code{"fo"} for raising by fishing operations, 
+\code{"fd"} for raising by fishing days,\code{"landings"} for ratio-to-total landings raising method, and \code{"time"} for ratio-to-fishing duration 
+raising method.
+\item[val] Estimated parameter. To be chosen between \code{"weight"} (default value), \code{"number"} and \code{"nAtLength"}.
+\item[sampPar] logical specifying if given species is considered to be automatically sampled during the sampling process (default value is \code{TRUE}).
+\item[landSpp] character vector describing the species considered in the 'volume of landings' variable if chosen raising method is ratio-to-landings (see 'clObject' description).  
+
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+An updated object of class dbeOutputSim.
+\end{Value}
+\begin{Author}\relax
+Dorleta Garcia <dgarcia@azti.es>
+\end{Author}
+\begin{References}\relax
+Vigneau, J. (2006)          
+\emph{Raising procedures for discards : Sampling theory (Toward agreed methodologies for calculating precision in the discard programmes)}. Working document in support of PGCCDBS (Rostock, 2006).
+\end{References}
+\begin{SeeAlso}\relax
+\code{\LinkA{totVolume}{totVolume}}
+\end{SeeAlso}
+

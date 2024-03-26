@@ -1,0 +1,26 @@
+\HeaderA{costDataCons}{Class "costDataCons"}{costDataCons}
+\keyword{classes}{costDataCons}
+\begin{Description}\relax
+The costDataCons-class is equivalent in structure to costData but stores consolidated forms of the simulated data set
+\end{Description}
+\begin{Section}{Objects from the Class}
+The creator function \code{costDataCons} can be called to create objects from this class.
+\end{Section}
+\begin{Section}{Slots}
+\Tabular{lrl}{
+\bold{slot} & \bold{class} & \bold{description} \\
+\bold{\code{desc}} & \code{character} & object description \\
+\bold{\code{ce}} & \code{ceDataCons} & consolidated commercial fisheries effort data \\
+\bold{\code{cl}} & \code{clDataCons} & consolidated commercial fisheries landings data \\
+\bold{\code{cs}} & \code{csDataCons} & consolidated commercial fisheries sampling data \\
+}
+\end{Section}
+\begin{Author}\relax
+Dorleta García \email{dgarcia@azti.es}
+\end{Author}
+\begin{Examples}
+\begin{ExampleCode}
+showclass("costDataCons")
+\end{ExampleCode}
+\end{Examples}
+

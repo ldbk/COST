@@ -1,0 +1,11 @@
+Package: COSTgui
+Type: Package
+Title: RCmdr Graphical User Interface for COST
+Version: 0.7
+Date: 2015
+Author: Vincent Guyader
+Maintainer: Laurent Dubroca <laurent.dubroca@ifremer.fr>
+Depends: Rcmdr (>= 1.4-0),tcltk,tcltk2,tkrplot,COSTcore,COSTeda,COSTdbe
+Description: Add a Rcmdr menu for the COST package
+License: GPL (>= 2)
+Packaged: 2013-03-04 10:27:56 UTC; Allastat

@@ -1,0 +1,35 @@
+\HeaderA{simDataVal}{Class "simDataVal"}{simDataVal}
+\keyword{classes}{simDataVal}
+\begin{Description}\relax
+The simDataVal-class is equivalent in structure to simData but stores validated forms of the simulated data sets
+\end{Description}
+\begin{Section}{Objects from the Class}
+The creator function \code{simDataVal} can be called to create objects from this class.
+\end{Section}
+\begin{Section}{Slots}
+\Tabular{lrl}{
+\bold{slot} & \bold{class} & \bold{description} \\
+\bold{\code{desc}} & \code{character} & object description \\
+\bold{\code{species}} & \code{character} & species description. Recall of SL\$spp and SL\$sex \\
+\bold{\code{samples}} & \code{list} & each element in the list is a costDataVal object representing a simulated data set \\
+\bold{\code{initial.fit}} & \code{list} &  \\
+\bold{\code{setup.args}} & \code{list} & set up parameters \\
+\bold{\code{burnin}} & \code{numeric} &  \\
+\bold{\code{nmcmc}} & \code{numeric} &  \\
+\bold{\code{l.int}} & \code{numeric} &  \\
+\bold{\code{Int}} & \code{list} &  \\
+\bold{\code{Slp}} & \code{list} &  \\
+\bold{\code{landings}} & \code{numeric} &  \\
+\bold{\code{nHaul}} & \code{integer} &  \\
+\bold{\code{nseas}} & \code{numeric} &  \\
+}
+\end{Section}
+\begin{Author}\relax
+Dorleta Garcia \email{dgarcia@azti.es}
+\end{Author}
+\begin{Examples}
+\begin{ExampleCode}
+showclass("simDataVal")
+\end{ExampleCode}
+\end{Examples}
+

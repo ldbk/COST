@@ -1,0 +1,27 @@
+\HeaderA{fillGaps}{Method for completing gaps in simulated data sets}{fillGaps}
+\keyword{methods}{fillGaps}
+\begin{Description}\relax
+This method completes dbeSimObj class objects with zeros in non sampled age and length dimensions 
+in order to have objects of the same dimension that can be compared
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+fillGaps(dbeSimObj, ageMin, ageMax, lenMin, lenMax)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{dbeSimObj}] A dbeOutputSim object
+\item[\code{ageMin}] Numeric indicating the minimum age sampled
+\item[\code{ageMax}] Numeric indicating the maximum age sampled
+\item[\code{lenMin}] Numeric indicating the minimum length sampled
+\item[\code{lenMax}] Numeric indicating the maximum length sampled
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+It returns the same object but with the age and length dimensions completed with zeros
+\end{Value}
+\begin{Author}\relax
+Dorleta Garcia \email{dgarcia@azti.es}
+\end{Author}
+

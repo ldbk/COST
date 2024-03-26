@@ -1,0 +1,324 @@
+		CHANGES IN COSTcore VERSION 1.4-0
+
+NEW FEATURES
+DOCUMENTATION
+BUG FIXES		
+    o bug in 'spdAgreg' when input table is only one row : fixed
+    o .rda files not allowed anymore : conversion to .RData
+
+		CHANGES IN COSTcore VERSION 1.3-9
+
+NEW FEATURES
+DOCUMENTATION
+BUG FIXES
+    o subset method applied to csData object : 'link' parameter activated 		
+    o bug in 'spdAgreg' when input table is only one row : fixed in COSTcore
+
+		CHANGES IN COSTcore VERSION 1.3-8
+
+NEW FEATURES
+DOCUMENTATION
+BUG FIXES
+    o csData object constructor : modification of 'colClasses' parameter in 'read.csv' call for HH table, so as to prevent "T" values in 'aggLev' field from being converted to "TRUE" 		
+
+		CHANGES IN COSTcore VERSION 1.3-7
+
+NEW FEATURES
+DOCUMENTATION
+BUG FIXES
+    o bug in csDataCons method fixed 		
+
+		CHANGES IN COSTcore VERSION 1.3-6
+
+NEW FEATURES
+DOCUMENTATION
+    o formatting .man files according to R-2.10 requirements 
+BUG FIXES		
+		CHANGES IN COSTcore VERSION 1.3-0
+
+NEW FEATURES
+    o new generics for "head", "tail", "summary"
+DOCUMENTATION
+BUG FIXES		
+
+		CHANGES IN COSTcore VERSION 1.2-6
+
+NEW FEATURES
+    o 'code.list' .rda file modified ($aggLev, $foCatEu5, $foCatEu6)
+    o 'ceDataCons' method : when 'techStrata=="commCat"', warning message and empty output object
+    o 'subset' method : empty tables (sl, hl) allowed in output cs object  
+DOCUMENTATION
+BUG FIXES		
+    o bug with 'subset' methods fixed (frame issue) 
+    
+		CHANGES IN COSTcore VERSION 1.2-5
+
+NEW FEATURES
+    o new format for objects based on FF_COST DEF . Version of 20081124. New data files.
+    o handling of cs_sex 'partial' key field issue in validity checks, subsetting,... methods
+    o modification of IO constructors
+DOCUMENTATION
+    o man updated according to new format
+BUG FIXES		
+     
+    CHANGES IN COSTcore VERSION 1.2-4
+
+NEW FEATURES
+    o new format for objects according to modified DEF defined during the 2nd COST expert meeting
+DOCUMENTATION
+BUG FIXES
+
+		CHANGES IN COSTcore VERSION 1.2-3
+
+NEW FEATURES
+    o new codification of time field in consolidated object for months (yyyy - q - m)
+    o 'check.fields' function added (with 'code.list', 'numeric.list' and 'variable.list' .rda files added in 'data' folder)
+    o checking process inserted in class construction (logical 'check' parameter)
+    o subset methods added for validated objects
+DOCUMENTATION
+    o man updated with modifications and new features 
+BUG FIXES
+
+		CHANGES IN COSTcore VERSION 1.2-2
+
+NEW FEATURES
+    o new raw, validated and consolidated objects matching the modification of the DEF described in the 'Minutes of the 2nd COST meeting'
+    o update of the consolidated class creator 
+    o addition of the year information to the consolidated fields 'time'
+    o inclusion of the field 'date' in the consolidated table hh
+    o update of the check methods according to objects new definitions (field names, key indexes,...)
+    o new 'subset' methods for raw and validated CS objects 
+    o new 'subsetSpp' method
+    o update of the 'sole' and 'soleData' .RData files (COSTcore package datasets)      
+DOCUMENTATION
+    o man updated with modifications and new features 
+BUG FIXES
+    o inclusion of 'space suppressor' to ensure the matching of keys in 'checkDataIntegrity' check method 
+
+		CHANGES IN COSTcore VERSION 1.2-1
+
+NEW FEATURES
+    o csDataCons class creator extended to csDataVal objects that only contain tr and ca information  
+DOCUMENTATION
+BUG FIXES
+    o bug if all ca datas were linked to hh table, fixed.
+
+		CHANGES IN COSTcore VERSION 1.2-0
+
+NEW FEATURES
+    o new strIni class with stratification definition (time, space, technical) and recoding specification
+    o new csDataCons class creator that post stratify a csDataVal object with respect to an input strIni object  
+    o new clDataCons class creator that post stratify a clDataVal object with respect to an input strIni object  
+    o new ceDataCons class creator that post stratify a ceDataVal object with respect to an input strIni object  
+DOCUMENTATION
+    o man updated with new features
+BUG FIXES
+
+		CHANGES IN COSTcore VERSION 1.1-1
+
+NEW FEATURES
+DOCUMENTATION
+BUG FIXES
+    o createSUid was using sole data so all outputs were sole's :-) now fixed
+
+		CHANGES IN COSTcore VERSION 1.1-0
+
+NEW FEATURES
+    o field "sex" hl slot in csData class moved to position 15
+    o method "createSUid" for csDataVal class to create sampling unit identifiers
+    o new creator for csDataCons that post stratify a csDataVal object
+    o new creator for clDataCons that post stratify a clDataVal object
+    o new creator for ceDataCons that post stratify a ceDataVal object
+    
+DOCUMENTATION
+BUG FIXES
+    o typo in tr field "vslType" (was vsType) fixed
+    o field valCode in sl slot in csDataCons removed
+
+		CHANGES IN COSTcore VERSION 1.0-0
+
+NEW FEATURES
+    o fields "catReg" and "sppReg" added in hh slot in csDataCons class
+    o fields "catReg" and "sppReg" added in hh slot in csData class
+    o method "checkHHnms" adjusted to include CATCH REGISTRATION and SPECIES REGISTRATION fields
+    o csData class ca slot fields order was changed, "quarter" and "month" now are after "staNum"
+    o method "checkCAnms" adjusted to new ca table order
+    o csData class ca slot now includes "quarter" and "month" in the primary key
+    o method "checkCApk" now considers fields 1:21 of csData class ca slot to be unique
+    o fields "valCode" removed from sl slot in csData class
+    o fields "valCode" removed from sl slot in csDataCons class
+    o method "checkSLnms" adjusted to remove VALIDITY CODE field
+
+DOCUMENTATION
+    o man reviewed
+BUG FIXES
+    o fields "month" and "quarter" were in the wrong order in ca slot in csData class
+    o subset method had a bug, the id vectors were left with white spaces that jeopardized the matching, now fixed
+    
+		CHANGES IN COSTcore VERSION 0.8-0
+
+NEW FEATURES
+    o accessors "cl" and "desc" for clDataCons
+DOCUMENTATION
+    o man reviewed
+BUG FIXES
+    o field "sort" missing from ca slot on csDataCons class
+
+		CHANGES IN COSTcore VERSION 0.7-0
+
+NEW FEATURES
+    o ceDataCons class definition fixed and column types defined
+    o clDataCons class definition fixed and column types defined
+    o csDataCons class definition fixed and column types defined
+    o ceData factor columns changed to character
+    o clData factor columns changed to character
+    o csData factor columns changed to character
+
+DOCUMENTATION
+    o man corrected
+
+		CHANGES IN COSTcore VERSION 0.6-0
+
+NEW FEATURES
+    o ceData class definition defines column types based on FF5 20071112
+    o clData class definition defines column types based on FF5 20071112
+    o csData class definition defines column types based on FF5 20071112
+    o validity check now checks the column types on ceData
+    o validity check now checks the column types on clData
+    o validity check now checks the column types on csData
+    o "checkTys" new method to check type of column against a reference list
+    o "coerceDataFrameColumns" new method to corce all columns of a dataframe into the column types of another dataframe
+    o ceData("data.frame") creator now coerces columns into corrected data types before calling "new".
+    o ceData creators other than ceData("data.frame") now call ceData("data.frame") to use the column coercing. 
+    o clData("data.frame") creator now coerces columns into corrected data types before calling "new".
+    o clData creators other than clData("data.frame") now call clData("data.frame") to use the column coercing. 
+    o csData creator now coerces columns into corrected data types before calling "new".
+    o csData io now call clData creator to use the column coercing. 
+    o tests adjusted to reflect the above changes
+    
+DOCUMENTATION
+    o most man pages added
+DEPRECATED & DEFUNCT
+    o is.ceData, the checking should be done with 'is'.
+    o is.clData, the checking should be done with 'is'.
+    o is.csData, the checking should be done with 'is'.
+
+
+		CHANGES IN COSTcore VERSION 0.5-0
+
+NEW FEATURES
+    o new constructor for ceData and clData for matrix objects.
+    o All classes adjusted to FF5 12/11 version. 
+    o accessors for ceDataCons 
+    o methods for ceDataCons: head, tail, summary, is, dim
+    o rbind2 for ceDataCons
+    o subset for ceDataCons
+    o accessors for clDataCons
+    o methods for clDataCons: head, tail, summary, is, dim
+    o rbind2 for clDataCons
+    o subset for clDataCons
+    o accessors for csDataCons 
+    o methods for csDataCons: head, tail, summary, is, dim
+    o rbind2 for csDataCons
+    o subset for csDataCons
+
+		CHANGES IN COSTcore VERSION 0.2-0
+
+NEW FEATURES
+    o new clDataCons class and creator
+    o new csDataCons class and creator
+    o new ceDataCons class and creator
+
+		CHANGES IN COSTcore VERSION 0.1-0
+
+NEW FEATURES
+    o new clDataVal class and creator
+    o new csDataVal class and creator
+    o new ceDataVal class and creator
+        
+USER-VISIBLE CHANGES
+BUG FIXES
+    o checkNms was comparing the object with itself, now corrected
+identical 
+
+UTILITIES
+DOCUMENTATION
+DEPRECATED & DEFUNCT
+
+
+		CHANGES IN COSTcore VERSION 0.0-6
+
+NEW FEATURES
+    o rbind2 for csData, ceData, clData
+        
+USER-VISIBLE CHANGES
+BUG FIXES
+identical 
+
+UTILITIES
+DOCUMENTATION
+DEPRECATED & DEFUNCT
+
+		CHANGES IN COSTcore VERSION 0.0-5
+
+NEW FEATURES
+    o subset for csData
+    o small adjustments to class definition to make it compatible with FF5 20071011
+    o subset for ceData and clData objects
+    o [ for ceData and clData objects 
+    o [<- for ceData and clData objects 
+    o new validity for csData that allows missing data in child tables
+    o new creators for csData that dispatch in missing child tables
+        
+USER-VISIBLE CHANGES
+BUG FIXES
+    o checkPk* was using all.equal which breaked the code in the case of FALSE, now uses identical 
+
+UTILITIES
+DOCUMENTATION
+DEPRECATED & DEFUNCT
+
+
+		CHANGES IN COSTcore VERSION 0.0-4
+
+NEW FEATURES
+    o new utils function head, tail, dim
+    o is.* functions
+    o unit tests for csData 
+    o unit tests for ceData 
+    o unit tests for clData 
+        
+USER-VISIBLE CHANGES
+BUG FIXES
+UTILITIES
+DOCUMENTATION
+DEPRECATED & DEFUNCT
+
+		CHANGES IN COSTcore VERSION 0.0-3
+
+NEW FEATURES
+    o S4 class for CS data "csData"
+    o Constructor for csData
+    o S4 class for CE data "ceData"
+    o Constructor for ceData
+    o S4 class for CL data "clData"
+    o Constructor for clData
+    o CS Sole dataset available with data("soleData")
+    o checkDataIntegrity method to check that the related table as records in reference table
+    o checkNms to check names in data.frame against a character vector
+    o csData object for Sole available with data("sole.cs")
+    o accessor functions for csData, ceData and clData
+    o documentation for "csData"
+    o documentation for "ceData"
+    o documentation for "clData"
+        
+USER-VISIBLE CHANGES
+BUG FIXES
+UTILITIES
+    o IO constructor csData
+    o Test methods borrowed from FLCore
+
+DOCUMENTATION
+DEPRECATED & DEFUNCT
+
+

@@ -1,0 +1,101 @@
+		CHANGES IN COSTdbe VERSION 1.4.1
+
+NEW FEATURES
+DOCUMENTATION 
+BUG FIXES
+    o 'sampledFO' method fixed (also in COSTeda v.1.4.0)
+
+		CHANGES IN COSTdbe VERSION 1.3.9
+
+NEW FEATURES
+DOCUMENTATION 
+BUG FIXES
+    o CI et CV calculation from replicates reviewed (dbeCalc & dbePlotRep)
+    o 'fillALKmult' crashed when considering empty strata -> fixed
+    o "+" operator applied to dbeOutput objects 
+    o fillALKmult debugged
+    o sampledFO debugged
+ 
+		CHANGES IN COSTdbe VERSION 1.3.7
+
+NEW FEATURES
+    o the methods for calculating the variances, CVs and confidence intervals are included as part of the raising methods
+    o estimation of mean length at age and precision (bpBoot & bpEstim)
+    o new method for calculating CVs per stratum of trip level estimates ("cvTripDCF")
+    o new method for filling out ALKs with multinomial model ("fillALKmult")
+DOCUMENTATION 
+    o help files updated
+BUG FIXES	
+
+		CHANGES IN COSTdbe VERSION 1.3.5
+
+NEW FEATURES
+DOCUMENTATION 
+BUG FIXES
+    o "totVolume" function : raising by landed weights reviewed	
+
+		CHANGES IN COSTdbe VERSION 1.3.4
+
+NEW FEATURES
+DOCUMENTATION 
+    o documentation updated according to R-2.10 requirements 
+BUG FIXES
+    o "vectorization" of 'RaiseLgth' and 'totVolume' algorithms to prevent from application crash		
+
+		CHANGES IN COSTdbe VERSION 1.2
+
+NEW FEATURES
+    o 'rbind2' method applied to 'dbeOutput' objects. 
+    o "+" operator implemented for 'dbeOutput' objects. 
+    o RaiseLgth and RaiseLgthBoot applied only to landings data if input CL object is not missing (ie if raised to population) 
+    o 'dbeCalc' is updating the 'dbeOutput' object by default 
+DOCUMENTATION 
+    o documentation updated
+BUG FIXES		
+
+		CHANGES IN COSTdbe VERSION 1.0
+
+NEW FEATURES
+    o 'alkLgthRec' has been updated : 'sExtrGrp', 'lExtrGrp' and 'sFillAge' types are removed, and virtual individuals in output object are created from recorded individuals duplication. 
+    o for 'type="stepIncr"' in 'alkLgthRec' method, a 'start' parameter can be specified to define the minimal length class after recoding. 
+    o 'stratAggreg' has been updated : weighted means calculations are made for biological parameters estimates. 
+    o 'bpEstim' has been updated : adjustment can be made within total length distribution ('lenStruc$estim' slot) in a 'dbeOuptut' object 
+DOCUMENTATION 
+BUG FIXES		
+    o virtual individuals are not considered anymore in 'nMeas' slot from 'dbeOutput' object
+    o subset on catch category has been added in 'RaiseLgth' method 
+
+		CHANGES IN COSTdbe VERSION 0.1-9
+
+NEW FEATURES
+    o in 'dbeCalc', negative bounds are replaced by 0 in output object.
+    o new 'stratAggreg' method for 'dbeOutput' object. Computes an aggregation (sum of 'value' field) of various 'dbeOutput' tables over specified stratification. 
+    o new 'makeICfile' and 'makeICdf' functions. Convert COST dbeOutput object to InterCatch Exchange Format file. 
+DOCUMENTATION
+    o 'stratAggreg' and 'InterCatch' help files added.  
+BUG FIXES		
+    o a bug in 'dbeCalc' concerning '$DCRcvIndicator' calculation from estimates was fixed.
+
+		CHANGES IN COSTdbe VERSION 0.1-8
+
+NEW FEATURES
+    o 'nMes' slot name in 'dbeOutput' object changed to 'nMeas'
+    o 'nSamp' and 'nMeas' slots in 'dbeOutput' object are now a list with 2 elements : 
+        oo $len is a data.frame with 4 fields ('time', 'space', 'technical' and 'value')
+        oo $age is a data.frame with 3 fields ('time', 'space' and 'value').
+    o in 'lenNum', 'ageNum', 'totalNnum' and 'totalWnum' slots, a new numeric element '$DCRcvIndicator' was added. 
+      It is a global value of '$cv' values weighted by corresponding '$estim' values.
+    o '$DCRcvIndicator' is now calculated along with '$cv' by 'dbeCalc' function. 
+DOCUMENTATION
+    o 'dbeOutput-class.rd' help file updated  
+BUG FIXES		
+    
+    CHANGES IN COSTdbe VERSION 1.4-0
+
+NEW FEATURES
+    o 'fillALKmult' process integrated in 'RaiseAgeBoot' method
+    o 'trace' option added in 'fillALKmult' method
+    o full process applied in 'totVolume' (val="weight", "number" & "nAtLength") 
+DOCUMENTATION
+BUG FIXES		
+

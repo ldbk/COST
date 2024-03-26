@@ -1,0 +1,42 @@
+\HeaderA{alkLgthRecSim}{Method for managing gaps in age-length keys for simulated data sets}{alkLgthRecSim}
+\keyword{methods}{alkLgthRecSim}
+\begin{Description}\relax
+This function is the counterpart of the \code{alkLgthRec} function 
+for \code{simDataCons} objects. It provides various methods to solve alk gaps problems. 
+Input object is updated according to chosen method(s) (grouped/recoded length classes, addition of 'virtual' individuals,...)
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+alkLgthRecSim(object,type="stepIncr",value,preview=FALSE,postview=TRUE,update=FALSE,...)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{object}] A \code{simDataCons} object with simulated data sets
+\item[\code{type}] Character for chosen method. Values are :
+\item["stepIncr"] Default parameter. Length class step is increased to specified \code{value} parameter (default value=10)
+\item["fillMiss"] All gaps (with size <= value) are filled out with the sum of surrounding recorded classes (default value=1)
+\item["sFillMiss"] The 'value' empty classe(s) prior to first recorded length class is filled out with the latter (default value=1)
+\item["lFillMiss"] The 'value' empty classe(s) following last recorded length class is filled out with the latter (default value=1) 
+
+\item[\code{value}] Numerical parameter for chosen method (see 'type').
+\item[\code{preview}] Logical. If \code{TRUE}, original age length key is displayed.
+\item[\code{postview}] Logical. If \code{TRUE}, new age length key is displayed.
+\item[\code{update}] Logical. If \code{TRUE}, 'csDataCons' object is updated in accordance with chosen method, and then returned. 
+If \code{FALSE}, descriptive elements about updated alk are returned (see 'values'), but input object remains unchanged.
+\item[\code{...}] Further arguments, and particularly a \code{start} numerical parameter specifying the first considered length class when recoding (only useful for 'type="stepIncr"'). 
+Default value is the minimum aged length class in \code{ca} table.
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+If \code{update=FALSE}, returned elements within \code{@samples} of the \code{simDataCons} object are : \code{\$alk} is the raw resulting age-length key, \code{\$propMiss} are short statistics about gaps (see 'propMissLgthCons' method), 
+\code{\$lgthCls} is a description of length classes recoding for 'stepIncr', 'sExtrGrp' and 'lExtrGrp' methods and \code{\$addIndTab} is a description of added virtual individuals 
+for other methods.
+\end{Value}
+\begin{Author}\relax
+Dorleta garcia \email{dgarcia@azti.es}
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{alkLgthRec}{alkLgthRec}}
+\end{SeeAlso}
+

@@ -1,0 +1,12 @@
+Package: COSTreport
+Title: ToDo
+Version: 1.1
+Date: 2015
+Author: Tian Simiao
+Description: ToDo
+Depends: R(>= 2.8.1), COSTcore, COSTeda, COSTdbe, xtable, methods
+Maintainer: Laurent Dubroca <laurent.dubroca@ifremer.fr>
+License: GPL (>= 2)
+LazyLoad: Yes
+LazyData: Yes
+

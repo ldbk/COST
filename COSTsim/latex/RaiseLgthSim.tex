@@ -1,0 +1,35 @@
+\HeaderA{RaiseLgthSim}{Estimation of total numbers-at-length from market sampling for simulated data sets}{RaiseLgthSim}
+\keyword{methods}{RaiseLgthSim}
+\begin{Description}\relax
+This method is the equivalent of the function \code{RaiseLgth} for dbeOutputSim class objects 
+and it calculates total numbers-at-length by strata from market sampling for simulated data sets
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+RaiseLgthSim(dbeOutputSim,simObj,spp,taxon,sex=as.character(NA),...)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{dbeOutputSim}] A dbeOutputSim object.
+\item[\code{simObj}] A simDataCons object matching 'dbeOutputSim' specifications.
+\item[\code{spp}] Species, if missing this is set to dbeOutput@species
+\item[\code{taxon}] Taxon, if missing this is set to dbeOutput@species
+\item[\code{sex}] Sex
+\item[\code{...}] Further arguments
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+An updated object of class dbeOutputSim.
+Slots \code{nSamp\$len} \& \code{nMeas\$len} with number of samples and measurements,
+\code{totalW\$estim} with total weight,
+\code{lenStruc\$estim} with numbers-at-length estimates,
+\code{lenVar} with the variance of numbers-at-length.
+\end{Value}
+\begin{Author}\relax
+Dorleta Garcia <dgarcia@azti.es>
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{dbeOutputSim}{dbeOutputSim}}, \code{\LinkA{simDataCons}{simDataCons}}, \code{\LinkA{RaiseLgth}{RaiseLgth}}
+\end{SeeAlso}
+

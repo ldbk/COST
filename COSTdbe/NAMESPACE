@@ -1,0 +1,42 @@
+import("utils","graphics","lattice")
+
+importClassesFrom("COSTcore")
+
+importFrom("COSTcore")
+
+export(
+  "dbeObject",
+  "makeICfile",
+  "makeICdf"
+)
+
+exportClasses(
+  "dbeOutput"
+)
+
+exportMethods(
+  "vesselRaise.an",
+  "vesselRaise.boot",
+	"totVolume",
+	"dbePlot",
+	"dbePlotRep",
+	"dbeCorrPlot",
+	"sampledFO",
+	"alkLgthRec",
+	"viewGapsAlkCons",
+	"propMissLgthCons",
+	"sampStrDef",
+	"bpEstim",
+	"dbeCalc",
+	"bpBoot",
+	"RaiseLgth",
+	"RaiseAge",
+	"stratAggreg",
+	"RaiseLgthBoot",
+	"RaiseAgeBoot",
+	"rbind2",
+	"+",
+	"tkFillGaps",
+	"cvTripDCF",
+	"fillALKmult"
+)

@@ -1,0 +1,33 @@
+\HeaderA{RaiseAgeSim}{Estimation of total numbers-at-age from market sampling for simulated data sets}{RaiseAgeSim}
+\keyword{methods}{RaiseAgeSim}
+\begin{Description}\relax
+This method is the equivalent of the function \code{RaiseAge} for dbeOutputSim class objects 
+and it calculates total numbers-at-age by strata from market sampling for simulated data sets
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+RaiseAgeSim(dbeOutputSim,simObj,type="fixed",sex=as.character(NA),...)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{dbeOutputSim}] A dbeOutputSim object.
+\item[\code{simObj}] A simDataCons object matching \code{dbeOutputSim} specifications.
+\item[\code{type}] Allocation strategy used to establish the age-length data.
+\item[\code{sex}] Sex
+\item[\code{...}] Further arguments
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+An updated object of class dbeOutputSim.
+Slots \code{nSamp\$age} \& \code{nMeas\$age} with number of samples and measurements,
+\code{ageStruc\$estim} with numbers-at-age estimates,
+\code{ageVar} with the variance of numbers-at-age .
+\end{Value}
+\begin{Author}\relax
+Dorleta Garcia \email{dgarcia@azti.es}
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{dbeOutputSim}{dbeOutputSim}}, \code{\LinkA{simDataCons}{simDataCons}}, \code{\LinkA{RaiseAge}{RaiseAge}}
+\end{SeeAlso}
+

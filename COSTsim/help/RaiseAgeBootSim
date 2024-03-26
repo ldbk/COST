@@ -1,0 +1,41 @@
+RaiseAgebootSim           package:COSTsim           R Documentation
+
+_E_s_t_i_m_a_t_i_o_n _o_f _t_o_t_a_l _n_u_m_b_e_r_s-_a_t-_a_g_e _f_r_o_m _m_a_r_k_e_t _s_a_m_p_l_i_n_g _w_i_t_h _b_o_o_t_s_t_r_a_p _v_a_r_i_a_n_c_e _f_o_r _s_i_m_u_l_a_t_e_d _d_a_t_a _s_e_t_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This method is the equivalent of the function 'RaiseAgeBoot' for
+     dbeOutputSim class objects and  it calculates total numbers-at-age
+     by strata from market sampling with bootstrap variance for
+     simulated data sets
+
+_U_s_a_g_e:
+
+     RaiseAgeBootSim(dbeOutputSim,simObj,type="fixed",sex=as.character(NA),bootMethod = "samples",...)
+
+_A_r_g_u_m_e_n_t_s:
+
+dbeOutputSim: A dbeOutputSim object.
+
+  simObj: A simDataCons object matching 'dbeOutputSim' specifications.
+
+    type: Allocation strategy used to establish the age-length data.
+
+     sex: Sex
+
+bootMethod: "samples" (the default) or "otoliths"
+
+     ...: Further arguments
+
+_V_a_l_u_e:
+
+     An updated object of class dbeOutputSim
+
+_A_u_t_h_o_r(_s):
+
+     Dorleta Garcia dgarcia@azti.es
+
+_S_e_e _A_l_s_o:
+
+     'dbeOutputSim', 'simDataCons', 'RaiseAgeBoot'
+

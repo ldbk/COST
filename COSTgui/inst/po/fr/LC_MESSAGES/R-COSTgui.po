@@ -1,0 +1,932 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: R 2.15.1\n"
+"Report-Msgid-Bugs-To: bugs@r-project.org\n"
+"POT-Creation-Date: 2013-02-18 19:01\n"
+"PO-Revision-Date: 2013-02-18 19:01+0100\n"
+"Last-Translator: baka <bak@legum.fr>\n"
+"Language-Team: vincent guyader <vincent@guyader.pro>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: french\n"
+"X-Poedit-Country: FRANCE\n"
+
+msgid "Select one dataset"
+msgstr "Choisir un jeu de données"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "You have to select strate1 and strat2"
+msgstr "Vous devez choisir strate1 et strate2"
+
+msgid "You have to select a csDataVal type object"
+msgstr "Vous devez spécifier un objet csDataVal"
+
+msgid "You have to select a strIni type object"
+msgstr "Vous devez spécifier un objet strIni"
+
+msgid "COST - Figure : ALK Multinomial analysis"
+msgstr "COST -Figure : Analyse multinomiale des CTA"
+
+msgid "ALK Multinomial analysis"
+msgstr "Analyse multinomiale des CTA"
+
+msgid "<select>"
+msgstr "<select>"
+
+msgid "New strIni type object"
+msgstr "Nouvel objet de type strIni"
+
+msgid "<dataset>"
+msgstr "<dataset>"
+
+msgid "save the script :"
+msgstr "sauvegarder le code :"
+
+msgid "CsDataVal :"
+msgstr "CsDataVal :"
+
+msgid "StrIni :"
+msgstr "StrIni :"
+
+msgid "create"
+msgstr "créer"
+
+msgid "plot"
+msgstr "graph"
+
+msgid "agelen plot :"
+msgstr "agelen plot :"
+
+msgid "age plus :"
+msgstr "age plus :"
+
+msgid "Temporal strata :"
+msgstr "Strate temporelle :"
+
+msgid "Space strata :"
+msgstr "Strate spaciale :"
+
+msgid "Technical  strata :"
+msgstr "Strate technique :"
+
+msgid "Temporal"
+msgstr "Temporel"
+
+msgid "Technical"
+msgstr "Technique"
+
+msgid "Spacial"
+msgstr "Spatial"
+
+msgid "You have to select a species"
+msgstr "Vous devez choisir une espèce"
+
+msgid "You have to specify an out object"
+msgstr "vous devez spécifier un objet de sortie"
+
+msgid "COST - ALK post treatment"
+msgstr "COST - Traitement des CTA"
+
+msgid "ALK post treatment"
+msgstr "Traitement des CTA"
+
+msgid "Validate"
+msgstr "Valider"
+
+msgid "View"
+msgstr "Voir"
+
+msgid "Preview"
+msgstr "Prévisualiser"
+
+msgid "out :"
+msgstr "sortie :"
+
+msgid "Multinomial model:"
+msgstr "Modèle multinomial:"
+
+msgid "step size modification:"
+msgstr "modification du pas:"
+
+msgid "update:"
+msgstr "Mise à jour:"
+
+msgid "Step:"
+msgstr "Pas:"
+
+msgid "out:"
+msgstr "sortie :"
+
+msgid "CsDataCons :"
+msgstr "CsDataCons :"
+
+msgid "species :"
+msgstr "espèce:"
+
+msgid "Number of (virtual) individuals :"
+msgstr "Nombre d'individus (virtuels) :"
+
+msgid "You have to specify a CsData, a type and an out name's objetc"
+msgstr "Vous devez spécifier CsData,un type et un nom d'objet de sortie"
+
+msgid "COST - Figure : Biological parameters"
+msgstr "COST - Figure : Paramètres biologiques"
+
+msgid "Biological parameters"
+msgstr "Paramètres biologiques"
+
+msgid "subset"
+msgstr "subset"
+
+msgid "CsData :"
+msgstr "CsData :"
+
+msgid "use subset :"
+msgstr "utiliser subset :"
+
+msgid "Selection -"
+msgstr "Selection -"
+
+msgid "No :"
+msgstr "Non :"
+
+msgid "Yes :"
+msgstr "Yes :"
+
+msgid "Sexratio"
+msgstr "sexratio"
+
+msgid "maturity"
+msgstr "maturité"
+
+msgid "weight"
+msgstr "poids"
+
+msgid "Type :"
+msgstr "Type :"
+
+msgid "You have to select a CsData and an out name's objetc"
+msgstr "Vous devez spécifier CsData et un nom d'objet de sortie"
+
+msgid "COST - Control table"
+msgstr "COST - Carte de contrôle"
+
+msgid "Control table"
+msgstr "Carte de contrôle"
+
+msgid "ClData :"
+msgstr "ClData :"
+
+msgid "CeData :"
+msgstr "CeData :"
+
+msgid "Control"
+msgstr "Controler"
+
+msgid "COST - Consolidation of the dataset"
+msgstr "COST - Consolidation du jeu de données"
+
+msgid "Consolidation of the dataset"
+msgstr "Consolidation du jeu de données"
+
+msgid "Reset"
+msgstr "Purger"
+
+msgid "COST - Validation of the dataset"
+msgstr "COST - Validation du jeu de données"
+
+msgid "Validation of the dataset"
+msgstr "Validation du jeu de données"
+
+msgid "You have to specify an elmt"
+msgstr "Vous devez specifier un element"
+
+msgid "COST - Figure : dbe"
+msgstr "COST - Figure : dbe"
+
+msgid "Figure : dbe"
+msgstr "Figure : dbe"
+
+msgid "dbeOutput:"
+msgstr "dbeOutput:"
+
+msgid "Description :"
+msgstr "Description :"
+
+msgid "Title :"
+msgstr "Titre :"
+
+msgid "ylab :"
+msgstr "libellé axe y:"
+
+msgid "Element :"
+msgstr "Element :"
+
+msgid "X stratum :"
+msgstr "Strate X:"
+
+msgid "Legend :"
+msgstr "Légende :"
+
+msgid "Step :"
+msgstr "Pas :"
+
+msgid "indScale :"
+msgstr "indScale :"
+
+msgid "layout :"
+msgstr "layout :"
+
+msgid "auto :"
+msgstr "auto :"
+
+msgid "You have to choose a Csdata"
+msgstr "vous devez choisir un Csdata"
+
+msgid "You have to choose a species"
+msgstr "vous devez choisir une espece"
+
+msgid "COST - Figure : Samples size comparison"
+msgstr "COST - Figure : Comparaison des échantillons en taille"
+
+msgid "Samples size comparison"
+msgstr "Comparaison des échantillons en taille"
+
+msgid "strate1"
+msgstr "strate1"
+
+msgid "strate2"
+msgstr "strate2"
+
+msgid "Selection :"
+msgstr "Selection :"
+
+msgid "delta :"
+msgstr "delta :"
+
+msgid "delta.plot :"
+msgstr "delta.plot :"
+
+msgid "automatic :"
+msgstr "automatique :"
+
+msgid "COST - Figure : Searching for discards~Variable correlation"
+msgstr "COST - Figure : Recherche corrélations rejets~variable"
+
+msgid "Figure : Searching for discards~Variable correlation"
+msgstr "Figure : Recherche corrélations rejets~variable"
+
+msgid "csDataCons:"
+msgstr "csDataCons:"
+
+msgid "Species"
+msgstr "Espèce:"
+
+msgid "Landing species"
+msgstr "Espèce débarquée"
+
+msgid "Time :"
+msgstr "Période :"
+
+msgid "Landings :"
+msgstr "Débarquements :"
+
+msgid "Weight :"
+msgstr "Poids :"
+
+msgid "Number :"
+msgstr "Nombre :"
+
+msgid "Partial sampling :"
+msgstr "Echantillonnage partiel :"
+
+msgid "Regression line :"
+msgstr "Droite de régression :"
+
+msgid "Show legend :"
+msgstr "Afficher légende :"
+
+msgid "Technical Strata :"
+msgstr "Strate technique :"
+
+msgid "all parameters are mandatory"
+msgstr "tous les parametres sont obligatoires"
+
+msgid "COST - Reporting"
+msgstr "COST - Reporting"
+
+msgid "Reporting"
+msgstr "Reporting"
+
+msgid "csObject :"
+msgstr "csObject :"
+
+msgid "Field"
+msgstr "Champ"
+
+msgid "By"
+msgstr "Par"
+
+msgid "File :"
+msgstr "Fichier :"
+
+msgid "Function :"
+msgstr "Function :"
+
+msgid "append :"
+msgstr "ajout :"
+
+msgid "You have to specify"
+msgstr "Vous devez specifier"
+
+msgid "in progress..."
+msgstr "en cours..."
+
+msgid "COST - CSV import"
+msgstr "COST - import CSV"
+
+msgid "CSV import"
+msgstr "importation CSV"
+
+msgid "Browse"
+msgstr "Parcourir"
+
+msgid "CsData"
+msgstr "CsData"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "tr"
+msgstr "tr"
+
+msgid "hh"
+msgstr "hh"
+
+msgid "sl"
+msgstr "sl"
+
+msgid "hl"
+msgstr "hl"
+
+msgid "ca"
+msgstr "ca"
+
+msgid "CeData"
+msgstr "CeData"
+
+msgid "ce"
+msgstr "ce"
+
+msgid "ClData"
+msgstr "ClData"
+
+msgid "cl"
+msgstr "cl"
+
+msgid "sep :"
+msgstr "sep :"
+
+msgid "COST - dataset import"
+msgstr "COST - import dataset"
+
+msgid "dataset import"
+msgstr "importation Dataset"
+
+msgid "< data tr >"
+msgstr "< data tr >"
+
+msgid "< data hh >"
+msgstr "< data hh >"
+
+msgid "< data sl >"
+msgstr "< data sl >"
+
+msgid "< data hl >"
+msgstr "< data hl >"
+
+msgid "< data ca >"
+msgstr "< data ca >"
+
+msgid "< data ce >"
+msgstr "< data ce >"
+
+msgid "< cl >"
+msgstr "< cl >"
+
+msgid "loading of"
+msgstr "chargement de"
+
+msgid "form file"
+msgstr "depuis le fichier"
+
+msgid "COST - Rdata import"
+msgstr "COST - importation Rdata"
+
+msgid "Rdata import"
+msgstr "importation Rdata"
+
+msgid "Rdata Path"
+msgstr "Chemin Rdata"
+
+msgid "Import selection"
+msgstr "importer la selection"
+
+msgid "You have to specify a CsData, a fraction, some species and an out name's objetc"
+msgstr "Vous devez spécifier CsData,une fraction, des especes  et un nom d'objet de sortie"
+
+msgid "COST - Figure : Trip volume of catches"
+msgstr "COST - Figure : Volume de captures par marée"
+
+msgid "Trip volume of catches"
+msgstr "Volume de captures par marée"
+
+msgid "Discards :"
+msgstr "Rejets :"
+
+msgid "plot :"
+msgstr "graph :"
+
+msgid "boxplot :"
+msgstr "boite à moustache :"
+
+msgid "You have to specify a CsData, a fraction and some species"
+msgstr "Vous devez spécifier CsData,une fraction et  des especes"
+
+msgid "COST - Figure : Size structure by Trip"
+msgstr "COST - Figure : Structure en taille par marée"
+
+msgid "Size structure by Trip"
+msgstr "Structure en taille par marée"
+
+msgid "COST - makeICdf"
+msgstr "COST - Exporter vers InterCatch"
+
+msgid "Export to InterCatch"
+msgstr "Exporter vers InterCatch"
+
+msgid "Catch category :"
+msgstr "Catégorie de capture:"
+
+msgid "Method description :"
+msgstr "Description de méthode :"
+
+msgid "Species :"
+msgstr "Espèces :"
+
+msgid "Parameter :"
+msgstr "Paramètre :"
+
+msgid "Technical strata :"
+msgstr "Strate technique :"
+
+msgid "filename :"
+msgstr "nom du fichier"
+
+msgid "output.df :"
+msgstr "output.df :"
+
+msgid "CANUMtype :"
+msgstr "CANUMtype :"
+
+msgid "Country :"
+msgstr "Pays :"
+
+msgid "ReportingCategory :"
+msgstr "ReportingCategory :"
+
+msgid "SamplesOrigin :"
+msgstr "SamplesOrigin :"
+
+msgid "COST - Raise parameters at Age"
+msgstr "COST - Elever les paramètres aux âges"
+
+msgid "Raise parameters at Age"
+msgstr "Elever les paramètres aux âges"
+
+msgid "clDataCons:"
+msgstr "clDataCons:"
+
+msgid "Analytical :"
+msgstr "Analytique:"
+
+msgid "Bootstrap :"
+msgstr "Bootstrap :"
+
+msgid "p :"
+msgstr "p :"
+
+msgid "Fixed allocation :"
+msgstr "Allocation fixe :"
+
+msgid "Proportional allocation :"
+msgstr "Allocation proportionnelle :"
+
+msgid "Age sampling :"
+msgstr "Echantillonnage en âge :"
+
+msgid "Age and length sampling :"
+msgstr "Echantillonnage en taille et en âge :"
+
+msgid "Fill gaps :"
+msgstr "Remplissage des trous :"
+
+msgid "Probabilities :"
+msgstr "Probabilités :"
+
+msgid "Sex :"
+msgstr "sexe :"
+
+msgid "You have to specify a species"
+msgstr "vous devez choisir une espece"
+
+msgid "You have to specify a strini"
+msgstr "vous devez choisir un Strini"
+
+msgid "You have to specify a sex"
+msgstr "Vous devez specifier un sex"
+
+msgid "You have to specify a clDataCons object"
+msgstr "vous devez choisir au minimum un clDataCons"
+
+msgid "You have to specify a taxon"
+msgstr "Vous devez specifier un taxon"
+
+msgid "You have to specify bootstrap or analytical"
+msgstr "vous devez choisir entre boostrap et analytique"
+
+msgid "COST - Raise parameters at length"
+msgstr "COST - Elever les paramètres aux tailles"
+
+msgid "Raise parameters at length"
+msgstr "Elever les paramètres aux tailles"
+
+msgid "parameter"
+msgstr "Paramètres"
+
+msgid "number@length :"
+msgstr "Nombre aux tailles :"
+
+msgid "weight@length :"
+msgstr "Poids aux tailles :"
+
+msgid "maturity@length :"
+msgstr "Maturité aux tailles"
+
+msgid "sexratio@length :"
+msgstr "Sexe aux tailles :"
+
+msgid "Taxon"
+msgstr "Taxon"
+
+msgid "Sex"
+msgstr "Sex"
+
+msgid "To the population :"
+msgstr "A la population :"
+
+msgid "To the sampled trips :"
+msgstr "Aux marées échantillonnées :"
+
+msgid "Empirical CA table :"
+msgstr "Empirique table CA :"
+
+msgid "Including partial species sampling :"
+msgstr "Incluant les espèces partiellement échantillonnées :"
+
+msgid "Number of replicates :"
+msgstr "Nombre de réplicats :"
+
+msgid "COST - View dbeObjetc"
+msgstr "COST - Voir un objet DBE"
+
+msgid "View dbeObjetc"
+msgstr "Voir un objet DBE"
+
+msgid "Print"
+msgstr "Afficher"
+
+msgid "Hide empty slot:"
+msgstr "Masque les champs vides:"
+
+msgid "You have to choose a CostObject"
+msgstr "vous devez choisir au minimum un CostObject"
+
+msgid "You have to specify an out name's for CostObject1"
+msgstr "vous devez spécifier un nom de sortie pour CostObject1"
+
+msgid "You have to specify an out name's for CostObject2"
+msgstr "vous devez spécifier un nom de sortie pour CostObject2"
+
+msgid "wait..."
+msgstr "patientez..."
+
+msgid "COST - Figure : Proportionality of sample"
+msgstr "COST - Figure : Proportionnalité de l'échantillonnage"
+
+msgid "Proportionality of sample"
+msgstr "Proportionnalité de l'échantillonnage"
+
+msgid "reset"
+msgstr "reset"
+
+msgid "CostObject1 :"
+msgstr "CostObject1 :"
+
+msgid "CostObject2 :"
+msgstr "CostObject2 :"
+
+msgid "rot :"
+msgstr "rot :"
+
+msgid "cex.lab :"
+msgstr "cex.lab :"
+
+msgid "none"
+msgstr "aucun"
+
+msgid "COST - mapping"
+msgstr "COST - Cartographie"
+
+msgid "New window"
+msgstr "nouvelle fenêtre"
+
+msgid "Color"
+msgstr "couleur"
+
+msgid "mapping"
+msgstr "Cartographie"
+
+msgid "Costobjet :"
+msgstr "Costobjet :"
+
+msgid "Value :"
+msgstr "Value :"
+
+msgid "Csobjet :"
+msgstr "Csobjet :"
+
+msgid "Area :"
+msgstr "Area :"
+
+msgid "Technical strata"
+msgstr "Strate technique"
+
+msgid "Temporal strata"
+msgstr "Strate temporelle"
+
+msgid "Space strata"
+msgstr "Strate spaciale"
+
+msgid "nplots :"
+msgstr "nplots :"
+
+msgid "xlab :"
+msgstr "xlab :"
+
+msgid "Y label"
+msgstr "Y label"
+
+msgid "function :"
+msgstr "fonction :"
+
+msgid "xlim :"
+msgstr "xlim :"
+
+msgid "ylim :"
+msgstr "ylim :"
+
+msgid "zlim :"
+msgstr "zlim :"
+
+msgid "overlay :"
+msgstr "overlay :"
+
+msgid "area.lines :"
+msgstr "area.lines :"
+
+msgid "statrects :"
+msgstr "statrects :"
+
+msgid "fcoast :"
+msgstr "fcoast :"
+
+msgid "landmass :"
+msgstr "landmass :"
+
+msgid "colour :"
+msgstr "couleur :"
+
+msgid "depths :"
+msgstr "depths :"
+
+msgid "breaks :"
+msgstr "breaks :"
+
+msgid "levels :"
+msgstr "levels :"
+
+msgid "pch :"
+msgstr "pch :"
+
+msgid "cex.max :"
+msgstr "cex.max :"
+
+msgid "digits :"
+msgstr "digits :"
+
+msgid "threshold :"
+msgstr "seuil :"
+
+msgid "cex :"
+msgstr "cex :"
+
+msgid "scale :"
+msgstr "echelle :"
+
+msgid "scaleplace :"
+msgstr "scaleplace :"
+
+msgid "titre scale :"
+msgstr "titre de l'echelle :"
+
+msgid "scale.box :"
+msgstr "scale.box :"
+
+msgid "scale.cex :"
+msgstr "scale.cex :"
+
+msgid "maptype"
+msgstr "type de carte"
+
+msgid "image"
+msgstr "image"
+
+msgid "contour"
+msgstr "contour"
+
+msgid "bubble"
+msgstr "bubble"
+
+msgid "value"
+msgstr "value"
+
+msgid "COST - Agregate strata"
+msgstr "COST -Agréger les strates"
+
+msgid "Agregate strata"
+msgstr "Agréger les strates"
+
+msgid "Catch component :"
+msgstr "Composante de capture :"
+
+msgid "Weighting :"
+msgstr "Pondération :"
+
+msgid "Total weight :"
+msgstr "Poids total :"
+
+msgid "Total number :"
+msgstr "Nombre total :"
+
+msgid "Including precision :"
+msgstr "Inclure la précision :"
+
+msgid "Rec"
+msgstr "Rec"
+
+msgid "out objetc :"
+msgstr "out objetc :"
+
+msgid "path :"
+msgstr "chemin :"
+
+msgid "name :"
+msgstr "nom :"
+
+msgid "preload :"
+msgstr "précharger :"
+
+msgid "edit"
+msgstr "éditer"
+
+msgid "save as CSV"
+msgstr "sauvegarder en csv"
+
+msgid "load a CSV"
+msgstr "charger un csv"
+
+msgid "^ apply ^"
+msgstr "^ appliquer ^"
+
+msgid "from :"
+msgstr "from :"
+
+msgid "to :"
+msgstr "to :"
+
+msgid "former :"
+msgstr "ancien :"
+
+msgid "new :"
+msgstr "nouveau :"
+
+msgid "COST - Stratification"
+msgstr "COST - Stratification"
+
+msgid "Stratification"
+msgstr "Stratification"
+
+msgid "tpRec"
+msgstr "tpRec"
+
+msgid "tcRec"
+msgstr "tcRec"
+
+msgid "spRec"
+msgstr "spRec"
+
+msgid "no selected rules"
+msgstr "pas de regle selectionne"
+
+msgid "no rules"
+msgstr "pas de regles"
+
+msgid "generate the subset"
+msgstr "generer le subset"
+
+msgid "save the subset"
+msgstr "sauvegarder le subset"
+
+msgid "Validate the rules"
+msgstr "Valider la condition"
+
+msgid "COST - subset"
+msgstr "COST - subset"
+
+msgid "<no rules yet>"
+msgstr "<pas encore de regles>"
+
+msgid "delete the rule"
+msgstr "supprimer la regle"
+
+msgid "reorganize the rules"
+msgstr "réorganiser les régles"
+
+msgid "Dataset"
+msgstr "Jeu de donnees"
+
+msgid "CA link :"
+msgstr "lier CA :"
+
+msgid "quantitative variables"
+msgstr "variables quanti"
+
+msgid "qualitative variables"
+msgstr "variables quali"
+
+msgid "qualitative levels"
+msgstr "Levels quali"
+
+msgid "quantitative threshold"
+msgstr "valeur seuil quanti"
+
+msgid "list of rules"
+msgstr "liste des regles"
+
+msgid "out CS:"
+msgstr "nom de sortie CS:"
+
+msgid "out CL:"
+msgstr "nom de sortie CL:"
+
+msgid "out CE:"
+msgstr "nom de sortie CE:"
+
+msgid "You have to specify a type"
+msgstr "Vous devez specifier un type"
+
+msgid "COST - totVolume"
+msgstr "COST -  Estimation du volume total"
+
+msgid "Estimate total volume"
+msgstr "Estimation du volume total"
+
+msgid "ceDataCons:"
+msgstr "ceDataCons:"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Trip :"
+msgstr "Marée :"
+
+msgid "Fishing operations :"
+msgstr "Opérations de pêche :"
+
+msgid "Fishing duration:"
+msgstr "Temps de pêche :"
+

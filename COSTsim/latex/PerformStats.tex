@@ -1,0 +1,50 @@
+\HeaderA{PerformStats}{Class "PerformStats"}{PerformStats}
+\aliasA{PerformStats-class}{PerformStats}{PerformStats.Rdash.class}
+\keyword{classes}{PerformStats}
+\begin{Description}\relax
+The PerformStats class stores the performance statistics to evaluate accuracy, bias and precision of different estimators. It is the outcome 
+object after applying the function \code{PerformStats}.
+\end{Description}
+\begin{Section}{Slots}
+\Tabular{lrl}{
+\bold{slot} & \bold{class} & \bold{description} \\
+\bold{\code{desc}} & \code{character} & object description \\
+\bold{\code{species}} & \code{character} & species description (recall of SL\$spp (+ SL\$sex)) \\
+\bold{\code{catchCat}} & \code{character} & recall of the catch category (discards/landings) \\
+\bold{\code{param}} & \code{character} & recall of the parameter estimated (N, W, maturity, sex-ratio,...) \\
+\bold{\code{strataDesc}} & \code{strIni} & time, space and technical stratification considered \\
+\bold{\code{methodDesc}} & \code{character} & recall of the method (analytical, bootstrap, bayesian) \\
+\bold{\code{nSamples}} & \code{numeric} & number of samples \\
+\bold{\code{ageTrue}} & \code{data.frame} & True age structure (param-at-length) \\
+\bold{\code{ageEst}} & \code{data.frame} & mean estimates of the age structure (param-at-length) \\
+\bold{\code{ageAcc}} & \code{list} & a list with Accuracy statistics at age \\
+\bold{\code{ageBias}} & \code{list} & a list with Bias statistics at age \\
+\bold{\code{agePrec}} & \code{list} & a list with Precision statistics at age \\
+\bold{\code{lenTrue}} & \code{data.frame} & True age structure (param-at-length) \\
+\bold{\code{lenEst}} & \code{data.frame} & mean estimates of the length structure (param-at-length) \\
+\bold{\code{lenAcc}} & \code{list} & a list with Accuracy statistics at length \\
+\bold{\code{lenBias}} & \code{list} & a list with Bias statistics at length \\
+\bold{\code{lenPrec}} & \code{list} & a list with Precision statistics at length \\
+\bold{\code{totalNTrue}} & \code{data.frame} & True age structure (param-at-length) \\
+\bold{\code{totalNEst}} & \code{data.frame} & mean estimates of the length structure (param-at-length) \\
+\bold{\code{totalNAcc}} & \code{list} & a list with Accuracy statistics at length \\
+\bold{\code{totalNBias}} & \code{list} & a list with Bias statistics at length \\
+\bold{\code{totalNPrec}} & \code{list} & a list with Precision statistics at length \\
+\bold{\code{totalWTrue}} & \code{data.frame} & True age structure (param-at-length) \\
+\bold{\code{totalWEst}} & \code{data.frame} & mean estimates of the length structure (param-at-length) \\
+\bold{\code{totalWAcc}} & \code{list} & a list with Accuracy statistics at length \\
+\bold{\code{totalWBias}} & \code{list} & a list with Bias statistics at length \\
+\bold{\code{totalWPrec}} & \code{list} & a list with Precision statistics at length \\
+}
+
+The accuracy, bias and precision statistics are described in detail in the COST manual
+\end{Section}
+\begin{Author}\relax
+Dorleta García \email{dgarcia@azti.es}
+\end{Author}
+\begin{Examples}
+\begin{ExampleCode}
+showclass("PerformStats")
+\end{ExampleCode}
+\end{Examples}
+

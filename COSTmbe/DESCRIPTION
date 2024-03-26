@@ -1,0 +1,12 @@
+Title: COSTmbe
+Package: COSTmbe
+Version: 1.0
+Author: Hanne Rognebakke, David Hirst and Geir Storvik
+Maintainer: Laurent Dubroca <laurent.dubroca@ifremer.fr>
+Depends: R (>= 2.8.1), MASS
+Description: Performs catch at age analysis using MCMC
+License: GPL2
+LazyLoad: Yes
+LazyData: Yes
+Packaged: Wed Jul 29 14:36:39 2009; david
+Built: R 2.8.1; x86_64-unknown-linux-gnu; 2009-07-29 14:36:39; unix

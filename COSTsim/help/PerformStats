@@ -1,0 +1,53 @@
+PerformStats             package:COSTsim             R Documentation
+
+_C_l_a_s_s "_P_e_r_f_o_r_m_S_t_a_t_s"
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     The PerformStats class stores the performance statistics to
+     evaluate accuracy, bias and precision of different estimators. It
+     is the outcome  object after applying the function 'PerformStats'.
+
+_S_l_o_t_s:
+
+
+       *slot*               *class*  *description*
+       *'desc'*         'character'  object description
+       *'species'*      'character'  species description (recall of SL$spp (+ SL$sex))
+       *'catchCat'*     'character'  recall of the catch category (discards/landings)
+       *'param'*        'character'  recall of the parameter estimated (N, W, maturity, sex-ratio,...)
+       *'strataDesc'*      'strIni'  time, space and technical stratification considered
+       *'methodDesc'*   'character'  recall of the method (analytical, bootstrap, bayesian)
+       *'nSamples'*       'numeric'  number of samples
+       *'ageTrue'*     'data.frame'  True age structure (param-at-length)
+       *'ageEst'*      'data.frame'  mean estimates of the age structure (param-at-length)
+       *'ageAcc'*            'list'  a list with Accuracy statistics at age
+       *'ageBias'*           'list'  a list with Bias statistics at age
+       *'agePrec'*           'list'  a list with Precision statistics at age
+       *'lenTrue'*     'data.frame'  True age structure (param-at-length)
+       *'lenEst'*      'data.frame'  mean estimates of the length structure (param-at-length)
+       *'lenAcc'*            'list'  a list with Accuracy statistics at length
+       *'lenBias'*           'list'  a list with Bias statistics at length
+       *'lenPrec'*           'list'  a list with Precision statistics at length
+       *'totalNTrue'*  'data.frame'  True age structure (param-at-length)
+       *'totalNEst'*   'data.frame'  mean estimates of the length structure (param-at-length)
+       *'totalNAcc'*         'list'  a list with Accuracy statistics at length
+       *'totalNBias'*        'list'  a list with Bias statistics at length
+       *'totalNPrec'*        'list'  a list with Precision statistics at length
+       *'totalWTrue'*  'data.frame'  True age structure (param-at-length)
+       *'totalWEst'*   'data.frame'  mean estimates of the length structure (param-at-length)
+       *'totalWAcc'*         'list'  a list with Accuracy statistics at length
+       *'totalWBias'*        'list'  a list with Bias statistics at length
+       *'totalWPrec'*        'list'  a list with Precision statistics at length
+
+     The accuracy, bias and precision statistics are described in
+     detail in the COST manual
+
+_A_u_t_h_o_r(_s):
+
+     Dorleta García dgarcia@azti.es
+
+_E_x_a_m_p_l_e_s:
+
+     showclass("PerformStats")
+

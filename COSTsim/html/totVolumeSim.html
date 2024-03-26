@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Estimation of total volume of discards or/and landings (weight, number or number-at-length) of simulated data sets</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for totVolumeSim {COSTsim}"><tr><td>totVolumeSim {COSTsim}</td><td align="right">R Documentation</td></tr></table>
+<h2>Estimation of total volume of discards or/and landings (weight, number or number-at-length) of simulated data sets</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This function is the equivalent to <code>totVolume</code> for 'simDataCons' class objects. It estimates total volume of discards or/and 
+landings (weight, number or number-at-length) based on various raising methods for simulated data sets.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+totVolume(dbeOutputSim,simObject,...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>dbeOutputSim</code></td>
+<td>
+A <EM>dbeOutputSim</EM> object. All necessary information for calculation process are taken in the first slots (species, catch category,...). See <EM>dbeObject</EM> method for object initialization.</td></tr>
+<tr valign="top"><td><code>simObject</code></td>
+<td>
+A <EM>simDataCons</EM> object matching 'dbeOutputSim' specifications.</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+Further arguments such as:
+<dt>type</dt><dd>Specification of the raising method : <code>"trip"</code> (default value) for raising by trip, <code>"fo"</code> for raising by fishing operations, 
+<code>"fd"</code> for raising by fishing days,<code>"landings"</code> for ratio-to-total landings raising method, and <code>"time"</code> for ratio-to-fishing duration 
+raising method.</dd>
+<dt>val</dt><dd>Estimated parameter. To be chosen between <code>"weight"</code> (default value), <code>"number"</code> and <code>"nAtLength"</code>.</dd>
+<dt>sampPar</dt><dd>logical specifying if given species is considered to be automatically sampled during the sampling process (default value is <code>TRUE</code>).</dd>
+<dt>landSpp</dt><dd>character vector describing the species considered in the 'volume of landings' variable if chosen raising method is ratio-to-landings (see 'clObject' description).</dd>  
+</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+An updated object of class dbeOutputSim.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Dorleta Garcia &lt;dgarcia@azti.es&gt;
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Vigneau, J. (2006)          
+<EM>Raising procedures for discards : Sampling theory (Toward agreed methodologies for calculating precision in the discard programmes)</EM>. Working document in support of PGCCDBS (Rostock, 2006).
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../COSTdbe/html/totVolume.html">totVolume</a></code>
+</p>
+
+
+
+<hr><div align="center">[Package <em>COSTsim</em> version 1.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

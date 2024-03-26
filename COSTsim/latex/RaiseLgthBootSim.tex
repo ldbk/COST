@@ -1,0 +1,38 @@
+\HeaderA{RaiseLgthBootSim}{Estimation of total numbers-at-length from market sampling with bootstrap variance for simulated data sets}{RaiseLgthBootSim}
+\keyword{methods}{RaiseLgthBootSim}
+\begin{Description}\relax
+This method is the equivalent of the function \code{RaiseLgthBoot} for dbeOutputSim class objects and 
+it calculates total numbers-at-length by strata from market sampling with bootstrap variance for simulated data sets
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+RaiseLgthBootSim(dbeOutputSim,simObj,spp,taxon,sex=as.character(NA),B,...)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{dbeOutputSim}] A dbeOutputSim object.
+\item[\code{simObj}] A simDataCons object matching \code{dbeOutputSim} specifications.
+\item[\code{spp}] Species, if missing this is set to dbeOutput@species
+\item[\code{taxon}] Taxon, if missing this is set to dbeOutput@species
+\item[\code{sex}] Sex
+\item[\code{B}] Number of bootstrap interations
+\item[\code{...}] Further arguments
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+An updated object of class dbeOutputSim.
+Slots \code{nSamp\$len} \& \code{nMeas\$len} with number of samples and measurements,
+\code{methodDesc} with "bootstrap",
+\code{totalW\$estim} with total weight,
+\code{lenStruc\$rep} \& \code{totalN\$rep} with bootstrap replicates for numbers-at-length and total numbers, iter=0 is assigned the estimates from the original data,
+\code{lenStruc\$estim} \& \code{totalN\$estim} with the mean of the bootstrap replicates,
+\code{lenVar} \& \code{totalNvar} with the variance of the bootstrap replicates
+\end{Value}
+\begin{Author}\relax
+Dorleta Garcia <dgarcia@azti.es>
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{dbeOutputSim}{dbeOutputSim}}, \code{\LinkA{simDataCons}{simDataCons}}, \code{\LinkA{RaiseLgthBoot}{RaiseLgthBoot}}
+\end{SeeAlso}
+

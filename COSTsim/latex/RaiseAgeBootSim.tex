@@ -1,0 +1,32 @@
+\HeaderA{RaiseAgebootSim}{Estimation of total numbers-at-age from market sampling with bootstrap variance for simulated data sets}{RaiseAgebootSim}
+\aliasA{RaiseAgeBootSim}{RaiseAgebootSim}{RaiseAgeBootSim}
+\keyword{methods}{RaiseAgebootSim}
+\begin{Description}\relax
+This method is the equivalent of the function \code{RaiseAgeBoot} for dbeOutputSim class objects and 
+it calculates total numbers-at-age by strata from market sampling with bootstrap variance for simulated data sets
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+RaiseAgeBootSim(dbeOutputSim,simObj,type="fixed",sex=as.character(NA),bootMethod = "samples",...)
+\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{dbeOutputSim}] A dbeOutputSim object.
+\item[\code{simObj}] A simDataCons object matching \code{dbeOutputSim} specifications.
+\item[\code{type}] Allocation strategy used to establish the age-length data.
+\item[\code{sex}] Sex
+\item[\code{bootMethod}] "samples" (the default) or "otoliths"
+\item[\code{...}] Further arguments
+\end{ldescription}
+\end{Arguments}
+\begin{Value}
+An updated object of class dbeOutputSim
+\end{Value}
+\begin{Author}\relax
+Dorleta Garcia \email{dgarcia@azti.es}
+\end{Author}
+\begin{SeeAlso}\relax
+\code{\LinkA{dbeOutputSim}{dbeOutputSim}}, \code{\LinkA{simDataCons}{simDataCons}}, \code{\LinkA{RaiseAgeBoot}{RaiseAgeBoot}}
+\end{SeeAlso}
+

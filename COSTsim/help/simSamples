@@ -1,0 +1,32 @@
+simSamples              package:COSTsim              R Documentation
+
+_S_i_m_u_l_a_t_i_o_n _o_f _d_a_t_a _s_e_t_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This function simulates data sets for the evaluation and
+     comparison of the estimation methods
+
+_U_s_a_g_e:
+
+     simSamples(obj, ...)
+
+_A_r_g_u_m_e_n_t_s:
+
+     obj: a 'simData' object 
+
+     ...: Further arguments 
+
+_V_a_l_u_e:
+
+     It returns a simData object with the 'sample' slots containing the
+     simulated data sets
+
+_A_u_t_h_o_r(_s):
+
+     Dorleta Garcia dgarcia@azti.es
+
+_S_e_e _A_l_s_o:
+
+     'simData'
+

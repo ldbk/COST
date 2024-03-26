@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Method for managing gaps in age-length keys for simulated data sets</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for alkLgthRecSim {COSTsim}"><tr><td>alkLgthRecSim {COSTsim}</td><td align="right">R Documentation</td></tr></table>
+<h2>Method for managing gaps in age-length keys for simulated data sets</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This function is the counterpart of the <code>alkLgthRec</code> function 
+for <code>simDataCons</code> objects. It provides various methods to solve alk gaps problems. 
+Input object is updated according to chosen method(s) (grouped/recoded length classes, addition of 'virtual' individuals,...)
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+alkLgthRecSim(object,type="stepIncr",value,preview=FALSE,postview=TRUE,update=FALSE,...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>object</code></td>
+<td>
+A <code>simDataCons</code> object with simulated data sets</td></tr>
+<tr valign="top"><td><code>type</code></td>
+<td>
+Character for chosen method. Values are :
+<dt>"stepIncr"</dt><dd>Default parameter. Length class step is increased to specified <code>value</code> parameter (default value=10)</dd>
+<dt>"fillMiss"</dt><dd>All gaps (with size &lt;= value) are filled out with the sum of surrounding recorded classes (default value=1)</dd>
+<dt>"sFillMiss"</dt><dd>The 'value' empty classe(s) prior to first recorded length class is filled out with the latter (default value=1)</dd>
+<dt>"lFillMiss"</dt><dd>The 'value' empty classe(s) following last recorded length class is filled out with the latter (default value=1)</dd> 
+</td></tr>
+<tr valign="top"><td><code>value</code></td>
+<td>
+Numerical parameter for chosen method (see 'type').</td></tr>
+<tr valign="top"><td><code>preview</code></td>
+<td>
+Logical. If <code>TRUE</code>, original age length key is displayed.</td></tr>
+<tr valign="top"><td><code>postview</code></td>
+<td>
+Logical. If <code>TRUE</code>, new age length key is displayed.</td></tr>
+<tr valign="top"><td><code>update</code></td>
+<td>
+Logical. If <code>TRUE</code>, 'csDataCons' object is updated in accordance with chosen method, and then returned. 
+If <code>FALSE</code>, descriptive elements about updated alk are returned (see 'values'), but input object remains unchanged.</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+Further arguments, and particularly a <code>start</code> numerical parameter specifying the first considered length class when recoding (only useful for 'type="stepIncr"'). 
+Default value is the minimum aged length class in <code>ca</code> table.</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+If <code>update=FALSE</code>, returned elements within <code>@samples</code> of the <code>simDataCons</code> object are : <code>$alk</code> is the raw resulting age-length key, <code>$propMiss</code> are short statistics about gaps (see 'propMissLgthCons' method), 
+<code>$lgthCls</code> is a description of length classes recoding for 'stepIncr', 'sExtrGrp' and 'lExtrGrp' methods and <code>$addIndTab</code> is a description of added virtual individuals 
+for other methods.</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Dorleta garcia <a href="mailto:dgarcia@azti.es">dgarcia@azti.es</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="../../COSTdbe/html/alkLgthRec.html">alkLgthRec</a></code>
+</p>
+
+
+
+<hr><div align="center">[Package <em>COSTsim</em> version 1.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

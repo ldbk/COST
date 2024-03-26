@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Method for completing gaps in simulated data sets</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for fillGaps {COSTsim}"><tr><td>fillGaps {COSTsim}</td><td align="right">R Documentation</td></tr></table>
+<h2>Method for completing gaps in simulated data sets</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This method completes dbeSimObj class objects with zeros in non sampled age and length dimensions 
+in order to have objects of the same dimension that can be compared
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+fillGaps(dbeSimObj, ageMin, ageMax, lenMin, lenMax)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>dbeSimObj</code></td>
+<td>
+A dbeOutputSim object</td></tr>
+<tr valign="top"><td><code>ageMin</code></td>
+<td>
+Numeric indicating the minimum age sampled</td></tr>
+<tr valign="top"><td><code>ageMax</code></td>
+<td>
+Numeric indicating the maximum age sampled</td></tr>
+<tr valign="top"><td><code>lenMin</code></td>
+<td>
+Numeric indicating the minimum length sampled</td></tr>
+<tr valign="top"><td><code>lenMax</code></td>
+<td>
+Numeric indicating the maximum length sampled</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+It returns the same object but with the age and length dimensions completed with zeros</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Dorleta Garcia <a href="mailto:dgarcia@azti.es">dgarcia@azti.es</a>
+</p>
+
+
+
+<hr><div align="center">[Package <em>COSTsim</em> version 1.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

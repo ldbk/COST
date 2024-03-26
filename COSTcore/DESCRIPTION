@@ -1,0 +1,13 @@
+Package: COSTcore
+Title: Core package of COST.
+Version: 1.4-0
+Date: 2015      
+Author: COST Team and various contributors.
+Description: COSTcore contains the core classes and methods for COST, a framework for analysis of fisheries sampling data.
+Depends: R(>= 2.11.1), methods
+Maintainer: Laurent Dubroca <laurent.dubroca@ifremer.fr>
+License: GPL (>= 2)
+Collate: mapvalues.R utils.R check-methods.R check.fields.R ceData-class.R ceDataVal-class.R ceDataCons-class.R clData-class.R clDataVal-class.R clDataCons-class.R csData-class.R csDataVal-class.R csDataCons-class.R FLtest.R zzz.R
+LazyLoad: Yes
+Packaged: 2012-02-29 10:00:16 UTC; mmerzere
+RoxygenNote: 6.0.1

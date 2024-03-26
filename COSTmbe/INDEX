@@ -1,0 +1,5 @@
+cost.fit                Fits data to catch at age model
+insert.wgl.param        Inserts parameter values for wgl model.
+predict.fit.cost        Predicts total catch from weight data and
+                        fitted model
+run.bayes               Runs Bayesian analysis to catch at age model

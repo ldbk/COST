@@ -1,0 +1,113 @@
+Entry: PerformStats
+Aliases: PerformStats PerformStats-class
+Keywords: classes
+Description: Class "PerformStats"
+URL: ../../../library/COSTsim/html/PerformStats.html
+
+Entry: PerformStats
+Aliases: PerformStats-methods
+Keywords: methods
+Description: Method for computing performance statistics
+URL: ../../../library/COSTsim/html/PerformStats_function.html
+
+Entry: RaiseAgebootSim
+Aliases: RaiseAgeBootSim
+Keywords: methods
+Description: Estimation of total numbers-at-age from market sampling with bootstrap variance for simulated data sets
+URL: ../../../library/COSTsim/html/RaiseAgeBootSim.html
+
+Entry: RaiseAgeSim
+Aliases: RaiseAgeSim
+Keywords: methods
+Description: Estimation of total numbers-at-age from market sampling for simulated data sets
+URL: ../../../library/COSTsim/html/RaiseAgeSim.html
+
+Entry: RaiseLgthBootSim
+Aliases: RaiseLgthBootSim
+Keywords: methods
+Description: Estimation of total numbers-at-length from market sampling with bootstrap variance for simulated data sets
+URL: ../../../library/COSTsim/html/RaiseLgthBootSim.html
+
+Entry: RaiseLgthSim
+Aliases: RaiseLgthSim
+Keywords: methods
+Description: Estimation of total numbers-at-length from market sampling for simulated data sets
+URL: ../../../library/COSTsim/html/RaiseLgthSim.html
+
+Entry: alkLgthRecSim
+Aliases: alkLgthRecSim
+Keywords: methods
+Description: Method for managing gaps in age-length keys for simulated data sets
+URL: ../../../library/COSTsim/html/alkLgthRecSim.html
+
+Entry: costData
+Aliases: costData
+Keywords: classes
+Description: Class "costData"
+URL: ../../../library/COSTsim/html/costData.html
+
+Entry: costDataCons
+Aliases: costDataCons
+Keywords: classes
+Description: Class "costDataCons"
+URL: ../../../library/COSTsim/html/costDataCons.html
+
+Entry: costDataVal
+Aliases: costDataVal
+Keywords: classes
+Description: Class "costDataVal"
+URL: ../../../library/COSTsim/html/costDataVal.html
+
+Entry: dbeCalcSim
+Aliases: dbeCalcSim
+Keywords: methods
+Description: CI and CV calculation
+URL: ../../../library/COSTsim/html/dbeCalcSim.html
+
+Entry: dbeOutputSim
+Aliases: dbeOutputSim
+Keywords: classes
+Description: Class "dbeOutputSim"
+URL: ../../../library/COSTsim/html/dbeOutputSim.html
+
+Entry: fillGaps
+Aliases: fillGaps
+Keywords: methods
+Description: Method for completing gaps in simulated data sets
+URL: ../../../library/COSTsim/html/fillGaps.html
+
+Entry: simData
+Aliases: simData
+Keywords: classes
+Description: Class "simData"
+URL: ../../../library/COSTsim/html/simData.html
+
+Entry: simDataCons
+Aliases: simDataCons
+Keywords: classes
+Description: Class "simDataCons"
+URL: ../../../library/COSTsim/html/simDataCons.html
+
+Entry: simDataVal
+Aliases: simDataVal
+Keywords: classes
+Description: Class "simDataVal"
+URL: ../../../library/COSTsim/html/simDataVal.html
+
+Entry: simSamples
+Aliases: simSamples
+Keywords: methods
+Description: Simulation of data sets
+URL: ../../../library/COSTsim/html/simSamples.html
+
+Entry: totVolumeSim
+Aliases: totVolumeSim
+Keywords: methods
+Description: Estimation of total volume of discards or/and landings (weight, number or number-at-length) of simulated data sets
+URL: ../../../library/COSTsim/html/totVolumeSim.html
+
+Entry: trueData
+Aliases: trueData
+Keywords: classes
+Description: Class "trueData"
+URL: ../../../library/COSTsim/html/trueData.html

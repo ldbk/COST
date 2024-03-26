@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>R: Estimation of total numbers-at-age from market sampling for simulated data sets</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="../../R.css">
+</head><body>
+
+<table width="100%" summary="page for RaiseAgeSim {COSTsim}"><tr><td>RaiseAgeSim {COSTsim}</td><td align="right">R Documentation</td></tr></table>
+<h2>Estimation of total numbers-at-age from market sampling for simulated data sets</h2>
+
+
+<h3>Description</h3>
+
+<p>
+This method is the equivalent of the function <code>RaiseAge</code> for dbeOutputSim class objects 
+and it calculates total numbers-at-age by strata from market sampling for simulated data sets
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+RaiseAgeSim(dbeOutputSim,simObj,type="fixed",sex=as.character(NA),...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>dbeOutputSim</code></td>
+<td>
+A dbeOutputSim object.</td></tr>
+<tr valign="top"><td><code>simObj</code></td>
+<td>
+A simDataCons object matching <code>dbeOutputSim</code> specifications.</td></tr>
+<tr valign="top"><td><code>type</code></td>
+<td>
+Allocation strategy used to establish the age-length data.</td></tr>
+<tr valign="top"><td><code>sex</code></td>
+<td>
+Sex</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+Further arguments</td></tr>
+</table>
+
+<h3>Value</h3>
+
+<p>
+An updated object of class dbeOutputSim.
+Slots <code>nSamp\$age</code> &amp; <code>nMeas\$age</code> with number of samples and measurements,
+<code>ageStruc\$estim</code> with numbers-at-age estimates,
+<code>ageVar</code> with the variance of numbers-at-age .</p>
+
+<h3>Author(s)</h3>
+
+<p>
+Dorleta Garcia <a href="mailto:dgarcia@azti.es">dgarcia@azti.es</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="dbeOutputSim.html">dbeOutputSim</a></code>, <code><a href="simDataCons.html">simDataCons</a></code>, <code><a href="../../COSTdbe/html/RaiseAge.html">RaiseAge</a></code>
+</p>
+
+
+
+<hr><div align="center">[Package <em>COSTsim</em> version 1.0 <a href="00Index.html">Index]</a></div>
+
+</body></html>

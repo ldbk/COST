@@ -1,0 +1,52 @@
+import("utils","graphics","lattice")
+
+importClassesFrom("COSTcore")
+
+importFrom("COSTcore")
+
+importClassesFrom("COSTdbe")
+
+importFrom("COSTdbe")
+
+export(
+"cost.simloop",
+"setup",
+"make.tau",
+"getmode",
+"dbeObjectSim",
+"fillGaps"
+	
+)
+
+
+exportClasses(
+	"costData", 
+	"costDataVal", 
+	"costDataCons",
+	"simData",  
+	"simDataVal",  
+	"simDataCons",
+	"dbeOutputSim",
+	"trueData",
+	"PerformStats"
+)
+
+
+exportMethods(
+	"costData", 
+	"costDataVal", 
+	"costDataCons",
+	"simData",  
+	"simDataVal",  
+	"simDataCons",
+	"trueData",
+	"PerformStats",
+	"dbeCalcSim",
+	"RaiseLgthSim",
+	"RaiseLgthBootSim",
+	"RaiseAgeSim",
+	"RaiseAgeBootSim",
+	"totVolumeSim",
+	"alkLgthRecSim",
+	"simSamples"
+)

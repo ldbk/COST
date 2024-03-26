@@ -1,0 +1,63 @@
+totVolumeSim             package:COSTsim             R Documentation
+
+_E_s_t_i_m_a_t_i_o_n _o_f _t_o_t_a_l _v_o_l_u_m_e _o_f _d_i_s_c_a_r_d_s _o_r/_a_n_d _l_a_n_d_i_n_g_s (_w_e_i_g_h_t, _n_u_m_b_e_r _o_r _n_u_m_b_e_r-_a_t-_l_e_n_g_t_h) _o_f _s_i_m_u_l_a_t_e_d _d_a_t_a _s_e_t_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This function is the equivalent to 'totVolume' for 'simDataCons'
+     class objects. It estimates total volume of discards or/and 
+     landings (weight, number or number-at-length) based on various
+     raising methods for simulated data sets.
+
+_U_s_a_g_e:
+
+     totVolume(dbeOutputSim,simObject,...)
+
+_A_r_g_u_m_e_n_t_s:
+
+dbeOutputSim: A _dbeOutputSim_ object. All necessary information for
+          calculation process are taken in the first slots (species,
+          catch category,...). See _dbeObject_ method for object
+          initialization.
+
+simObject: A _simDataCons_ object matching 'dbeOutputSim'
+          specifications.
+
+     ...: Further arguments such as:
+
+     _t_y_p_e Specification of the raising method : '"trip"' (default
+          value) for raising by trip, '"fo"' for raising by fishing
+          operations,  '"fd"' for raising by fishing days,'"landings"'
+          for ratio-to-total landings raising method, and '"time"' for
+          ratio-to-fishing duration  raising method.
+
+     _v_a_l Estimated parameter. To be chosen between '"weight"' (default
+          value), '"number"' and '"nAtLength"'.
+
+     _s_a_m_p_P_a_r logical specifying if given species is considered to be
+          automatically sampled during the sampling process (default
+          value is 'TRUE').
+
+     _l_a_n_d_S_p_p character vector describing the species considered in the
+          'volume of landings' variable if chosen raising method is
+          ratio-to-landings (see 'clObject' description).   
+
+_V_a_l_u_e:
+
+     An updated object of class dbeOutputSim.
+
+_A_u_t_h_o_r(_s):
+
+     Dorleta Garcia <dgarcia@azti.es>
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Vigneau, J. (2006)           _Raising procedures for discards :
+     Sampling theory (Toward agreed methodologies for calculating
+     precision in the discard programmes)_. Working document in support
+     of PGCCDBS (Rostock, 2006).
+
+_S_e_e _A_l_s_o:
+
+     'totVolume'
+

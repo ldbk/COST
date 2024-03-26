@@ -1,0 +1,54 @@
+dbeCalcSim              package:COSTsim              R Documentation
+
+_C_I _a_n_d _C_V _c_a_l_c_u_l_a_t_i_o_n
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Method for calculating coefficients of variation or confidence
+     intervals from dbeOutputSim object estimates. This function is
+     equivalent to 'dbeCalc' for dbeOutput but with the 'update'
+     argument always set equal to TRUE
+
+_U_s_a_g_e:
+
+     dbeCalcSim(object,type="CI",vrbl="l",probs=c(0.025,0.975),replicates=FALSE,...)
+
+_A_r_g_u_m_e_n_t_s:
+
+  object: A 'dbeOutputSim' object.
+
+    type: Character. "CI" for confidence interval calculation, or "CV"
+          for coefficients of variation.
+
+    vrbl: Character specifying 'dbeOutput' estimates on which
+          calculation is applied : "l" for length structure, "a" for
+          age structure, "n" for total number estimates, "w" for total
+          weight estimates.
+
+   probs: Numeric vector of probabilities with values in [0,1]. Defines
+          CI bounds (relevant only if 'type="CI"'). See 'quantile'.
+
+replicates: Logical. If 'TRUE', calculation is made from @...$rep
+          elements ; if 'FALSE', @...$estim and @...Var 'dbeOutput'
+          data are used.
+
+     ...: Further arguments used as ''quantile' method input parameter
+          (if 'type="CI"' and besides 'probs' parameter).
+
+_D_e_t_a_i_l_s:
+
+     If calculation is made from replicates (see _replicates_
+     parameter), confidence interval is estimated using _quantile_
+     function with _probs_ and ... parameters. If calculation is made
+     from estimates, normal distribution of total estimates is assumed
+     to compute confidence intervals.  Possible resulting negative
+     bounds are automatically replaced by 0 in output object.
+
+_A_u_t_h_o_r(_s):
+
+     Dorleta Garcia dgarcia@azti.es
+
+_S_e_e _A_l_s_o:
+
+     'dbeOutputSim', 'dbeCalc' 'quantile'
+

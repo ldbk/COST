@@ -1,0 +1,143 @@
+\HeaderA{run.bayes}{Estimate numbers-at-age and numbers-at-length using Bayesian model}{run.bayes}
+\begin{Description}\relax
+Estimate numbers-at-age and numbers-at-length from market sampling and/or observer data 
+with sampling strategy: Length only, length+age or length + ALK. Commercial categories  may be 
+sampled within Trips
+Data source:  type 'S' and/or 'M'
+estimates are provided of numbers at age and length, weight given age and length given age, for 
+both landed and discarded fish (discarded only if dicards in data)
+\end{Description}
+\begin{Usage}
+\begin{verbatim}
+run.bayes(csObject, clObject, fit,do.predict,species,season.definition,burnin,
+                    thin,nmcmc,ageMin,ageMax,wgl.eqn,age.covariates,weight.covariates,
+                    prediction.cells,use.areas,length.list,adj)\end{verbatim}
+\end{Usage}
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{csObject}] A \emph{csDataCons} object of sampling data
+\item[\code{clObject}] A \emph{clDataCons} object of landings data
+\item[\code{fit}] either NULL or a fit output object from run.bayes. If non-null no fitting (only 
+prediction) is done
+\item[\code{do.predict}] Logical. If FALSE only fitting is done
+\item[\code{species}] Character
+\item[\code{season.definition}] Character. "quarter" or "month"
+\item[\code{burnin}] Integer. Number of mcmc samples before samples are stored. Default 2000
+\item[\code{thin}] Integer. Fraction of mcmcsamples after burnin that are stored, eg if thin=10 every 
+10th sample is stored. Default 1 (all samples stored)
+\item[\code{nmcmc}] Integer. Number of mcmc samples stored. Default 1000. Note if nmcmc=1000 and 
+thin=10 then 10000 samples are run.
+\item[\code{ageMin}] integer >=0. Minimum age in model. Can be lower than minimum observed age
+\item[\code{ageMax}] integer >=0. Maximum age in model. Can be higherthan maximum observed age. All 
+ages >= ageMax are considered a plus group
+\item[\code{wgl.eqn}] list. equation for log weight given log length including covariates. If 
+wgl.eqn=NULL observed weights are used to estimate relationship
+\item[\code{age.covariates}] list. Which covariates to include in age and length-given-age model
+\item[\code{weight.covariates}] list. Which covariates to include weight-given-length model
+\item[\code{prediction.cells}] list. values of covariates over which to sum catch-at-age and 
+at-length
+\item[\code{use.areas}] Character. Areas to be included in model. Must be
+contiguous and include all areas in data. Can include areas 
+with no observations
+\item[\code{length.list}] list defining length groups for output of catch at age and length
+\item[\code{adj}] list defining adjacency relationship of areas in use.areas
+\end{ldescription}
+\end{Arguments}
+\begin{Details}\relax
+catch-at-age and at-length are estimated for the sum over all covariates in the prediction.cells 
+list. The values are raised to the total landings in the clObject.
+\end{Details}
+\begin{Value}
+\begin{ldescription}
+\item[\code{predict}] An object containing samples from the posterior distributions of all the 
+predicted catch statistics. They are:
+predict$totcatch.land: An array of dimension n length categories x n age classes x n samples. 
+Contains predictions of numbers at age and length in landings.
+predict$totcatch.disc: An array of dimension n length categories x n age classes x n samples. 
+Contains predictions of numbers at age and length in discards (NULL if no discard data)
+predict$mean.lga.land: An array of dimension n age classes x n samples. Contains predictions of 
+mean length at age in landings
+predict$mean.lga.disc: An array of dimension n age classes x n samples. Contains predictions of 
+mean length at age in discards (NULL if no discard data)
+predict$mean.wga.land: An array of dimension n age classes x n samples. Contains predictions of 
+mean weight at age in landings
+predict$mean.wga.disc: An array of dimension n age classes x n samples. Contains predictions of 
+mean weight at age in discards (NULL if no discard data)
+predict$avec: The age classes used
+predict$l.int: Midpoints of length classes (on log scale)
+
+\item[\code{fit}] An object containing samples from the posterior distributions of all the fitted 
+parameters, the most important of which are:
+fit$age$Int$eff$Const: Matrix of simension n agesx n samples. Constant parameters of age model.
+fit$age$Int$eff$seas: Array of dimension nages x n seasons x n samples. Season parameters for age 
+model. Null if season effect not fitted.
+fit$age$Int$eff$gear: Array of dimension nages x n gears x n samples. Gear parameters for age 
+model. Null if gear effect not fitted.
+fit$age$Int$eff$area: Array of dimension nages x n areas x n samples. Area parameters for age 
+model. Null if area effect not fitted.
+fit$lga$Int$eff Contains parameters for intercept in length-given-age model
+fit$lga$Slp$eff Contains parameters for slope in length-given-age model
+fit$wgl$Int$eff Contains parameters for intercept in weight-given-length model
+fit$wgl$Slp$eff Contains parameters for slope in weight-given-length model
+
+\item[\code{dbeObject.list}] list of ourput objects in dbe format
+\end{ldescription}
+\end{Value}
+\begin{Note}\relax
+At present only data types "S" and "M" are useable. Also age-given-length data are currently only 
+used if there is length distribution data from the same sampling unit.
+\end{Note}
+\begin{Author}\relax
+David Hirst
+\end{Author}
+\begin{References}\relax
+\url{http://wwz.ifremer.fr/cost}
+\end{References}
+\begin{SeeAlso}\relax
+\code{\LinkA{dbeOutput}{dbeOutput}, \LinkA{dbeOutput}{dbeOutput}, \LinkA{dbeOutput}{dbeOutput}, 
+\LinkA{dbeOutput}{dbeOutput}, \LinkA{dbeOutput}{dbeOutput} }
+\end{SeeAlso}
+\begin{Examples}
+\begin{ExampleCode}
+species<-"HAD" #code for Haddock in the CEFAS2006 data
+use.areas<-c("VIIE", "VIIH", "VIIG", "VIIF", "IVB")
+adj<-list(num=c(4,4,4,4,4),adj=c(2:5,1,3:5,1:2,4:5,1:4),areanames=use.areas)
+# define adjacency relationship. Ech of the 5 areas is a neighbour of all the others,ie each has 
+4 neighbours, defined in adj$num. adj$adj definies which the neighbours are, so the 2 neighbours 
+ofthe first area are areas 2:5, those of the second area are 1 and 3:5 etc. Note that this 
+definition does not have to be physically accurate, but there must be no isolated areas.
+
+season.definition<-"quarter" #or "month" if data appropriate
+ageMin<-0 # minimum age in model
+ageMax<-9 # maximum age in model
+
+wgl.eqn<-list(slope=list(const=2.8268,seas=NULL,gear=NULL,area=NULL),int=list(const=-4.15625,
+   seas=c(-0.0107,-0.0237,-0.0774,-0.0569,-0.0435,-0.0368,0.0211,0.0397,0.0458,
+     0.0817,0.0458,0.0148),gear=NULL,area=NULL))#This is appropriate for FRS haddock
+wgl.eqn<-list(slope=list(const=2.8571,seas=NULL,gear=NULL,area=NULL),int=list(const=-4.047639,
+   seas=0.0078,-0.0328,-0.0387,-0.0690,-0.0036,-0.0152,-0.0269,0.0577,0.0303,0.0358,
+     0.0413,0.0134),gear=NULL,area=NULL)#This is appropriate for FRS cod
+wgl.eqn<-NULL # The CEFAS data includes individual weights so there is no need to define a 
+weight-length relationship.
+
+age.covariates<-list(season=T,gear=F,area=F)#include only season covariates.
+weight.covariates<-list(season=T,gear=F,area=F)
+
+prediction.cells<-list(areas="ALL",gears="ALL",seasons="ALL")# sum results over all levels of all 
+covariates
+
+length.list<-list(minl=50,maxl=1000,int=50)# estimate catch at length in 50mm intervals from 50 
+to 1000.
+
+fit<-run.bayes(csdata=CEFAS2006cs,cldata=CEFAS2006cl,fit=NULL,do.predict=T,species,
+               
+season.definition=season.definition,burnin=500,thin=1,nmcmc=50,ageMin=ageMin,ageMax=ageMax,
+                    wgl.eqn=wgl.eqn,age.covariates,weight.covariates,prediction.cells,use.areas,
+               length.list,adj)
+
+catch.at.age<-apply(fit$predict$totcatch.land,2:3,sum)
+mean.caa<-rowMeans(catch.at.age)#mean landings-at-age
+sd.caa<-sqrt(rowVars(catch.at.age))#sd landings-at-age
+\end{ExampleCode}
+\end{Examples}
+

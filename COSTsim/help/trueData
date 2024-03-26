@@ -1,0 +1,33 @@
+trueData               package:COSTsim               R Documentation
+
+_C_l_a_s_s "_t_r_u_e_D_a_t_a"
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     The trueData class stores the true data set
+
+_O_b_j_e_c_t_s _f_r_o_m _t_h_e _C_l_a_s_s:
+
+     The creator function 'trueData' can be called to create objects
+     from this class.
+
+_S_l_o_t_s:
+
+
+       *slot*               *class*  *description*
+       *'desc'*         'character'  object description
+       *'species'*      'character'  species description (recall of SL$spp (+ SL$sex))
+       *'strataDesc'*      'StrIni'  time, space and technical stratification considered
+       *'lal'*         'data.frame'  true landings at age
+       *'laa'*         'data.frame'  true landings at length
+       *'dal'*         'data.frame'  true discards at length
+       *'dtw'*         'data.frame'  true discards total weight
+
+_A_u_t_h_o_r(_s):
+
+     Dorleta García dgarcia@azti.es
+
+_E_x_a_m_p_l_e_s:
+
+     showclass("trueData")
+
