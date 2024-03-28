@@ -1,3 +1,3 @@
-# ptyx (development version)
+# COSTlite (development version)
 
 * Initial CRAN submission.

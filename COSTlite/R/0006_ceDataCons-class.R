@@ -11,7 +11,7 @@ valcecData <- function(object){
 	ce <- object@ce
 
 	# I will rely o the prototype to check col names and size. I'm not sure it's a good strategy !
-	obj <- new("ceDataCons")
+	obj <- methods::new("ceDataCons")
 	ce0 <- obj@ce
 	
 	# check columns
@@ -57,6 +57,7 @@ setClass("ceDataCons",
 #' @param object \link{ceDataVal-class} object
 #' @param objStrat stratification \link{strIni-class} object
 #' @param desc character vector of stock information 
+#' @param \\dots parameters 
 #' @rdname ceDataCons-constructors
 #' @docType methods
 #' @export
@@ -113,16 +114,16 @@ setMethod("ceDataCons", signature("ceDataVal","strIni"), function(object, objStr
 	}
 
 	if(empty){
-		new("ceDataCons",desc=desc)
+		methods::new("ceDataCons",desc=desc)
 	} else {
 		if (!is.na(tcRec[1])) CE <- recFun(CE,"technical",tcRec)      
 
  
 	# Creation of the CONSOLIDATED object
-		csc <- new("ceDataCons")
+		csc <- methods::new("ceDataCons")
 		ce <- CE[,match(names(csc@ce),names(CE))]
 		rownames(ce) <- 1:nrow(ce)  
-		new("ceDataCons",desc=desc,ce=coerceCons(ce,csc@ce))
+		methods::new("ceDataCons",desc=desc,ce=coerceCons(ce,csc@ce))
 	}
 })
 
@@ -133,26 +134,30 @@ setMethod("ceDataCons", signature("ceDataVal","missing"), function(object,desc="
 
 #' @rdname ceDataCons-constructors
 setMethod("ceDataCons", signature("missing","missing"), function(desc="Unknown stock", ...){
-	new("ceDataCons", desc=desc)
+	methods::new("ceDataCons", desc=desc)
 })	
 
+#' ceDataCons methods 
+#' @param object,x,y \link{ceDataCons-class} object
+#' @param subset subset expression
+#' @param \\dots parameters 
+#' @rdname ceDataCons-methods
+#' @docType methods
+#' @export
 setMethod("ce", signature("ceDataCons"), function(object, ...){
 	object@ce
 	}
 )
 
-setMethod("desc", signature("ceDataCons"), function(object, ...){
-	object@desc
-	}
-)
-
+#' @rdname ceDataCons-methods
 setMethod("head", signature("ceDataCons"), function(x, ...){
-  object <- new("ceDataCons",desc=x@desc)
+  object <- methods::new("ceDataCons",desc=x@desc)
   object@ce <- head(x@ce)
   return(object)  
 	}
 )
 
+#' @rdname ceDataCons-methods
 setMethod("summary", signature("ceDataCons"), function(object, ...){
   ll <- list()
   ll$desc <- object@desc
@@ -161,19 +166,22 @@ setMethod("summary", signature("ceDataCons"), function(object, ...){
 	}
 )
 
+#' @rdname ceDataCons-methods
 setMethod("dim", signature("ceDataCons"), function(x){
 	return(dim(x@ce))  
 })
 
+#' @rdname ceDataCons-methods
 setMethod("rbind2", signature(x="ceDataCons", y="ceDataCons"), function(x,y){
-	df0 <- rbind2(ce(x),ce(y))
-	new("ceDataCons", ce=df0)
+	df0 <- methods::rbind2(ce(x),ce(y))
+	methods::new("ceDataCons", ce=df0)
 })
 
+#' @rdname ceDataCons-methods
 setMethod("subset", signature(x="ceDataCons"), function(x,subset,...){
 	e <- substitute(subset)
 	df0 <- ce(x)	
 	r <- eval(e, df0, parent.frame(n=2))
-	new("ceDataCons", desc=x@desc, ce=df0[r,])
+	methods::new("ceDataCons", desc=x@desc, ce=df0[r,])
 })
 

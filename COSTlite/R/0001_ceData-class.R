@@ -7,23 +7,16 @@
 #'
 #' @export
 valceData <- function(object){
-
 	ce <- object@ce
-
-	# I will rely o the prototype to check col names and size. I'm not sure it's a good strategy !
-	obj <- new("ceData")
+	obj <- methods::new("ceData")
 	ce0 <- obj@ce
-	
 	# check columns
 	if(checkNms(ce, names(ce0))==FALSE) stop("Check slot candidate \"ce\" columns' size and names.")
-	
 	# check PK
-	if(checkCEpk(ce)==FALSE) stop("Primary key not unique in slot candidate \"ce\".")
-
+	if(checkpk(ce,"ce")==FALSE) stop("Primary key not unique in slot candidate \"ce\".")
 	# check column types
 	tys0 <- lapply(ce0,class)
 	if(checkTys(ce, tys0)==FALSE) stop("Column types not correct in slot candidate \"ce\".")
-
 	# Everything is fine
 	return(TRUE)
 }
@@ -69,7 +62,9 @@ setClass("ceData",
 
 #' ceData constructors
 #' @param ce dataframe following the ce slot of a \link{ceData-class} object
+#' @param desc descriptor
 #' @param missing : create an empty \link{ceData-class} object
+#' @param \\dots parameters
 #' @rdname ceData-constructors
 #' @docType methods
 #' @export
@@ -81,18 +76,18 @@ setGeneric("ceData", function(ce, ...){
 #' @rdname ceData-constructors
 setMethod("ceData", signature("data.frame"), function(ce, desc="Unknown stock", ...){
 	# create object and name columns properly 
-	obj <- new("ceData")
+	obj <- methods::new("ceData")
 	ce0 <- obj@ce
 	names(ce) <- names(ce0)
 	# corce columns
 	ce <- coerceDataFrameColumns(ce, ce0)
 	# object
-	new("ceData", ce=ce, desc=desc)
+	methods::new("ceData", ce=ce, desc=desc)
 })
 
 #' @rdname ceData-constructors
 setMethod("ceData", signature("missing"), function(desc="Unknown stock", ...){
-	new("ceData", desc=desc)
+	methods::new("ceData", desc=desc)
 })
 
 
@@ -101,6 +96,7 @@ setMethod("ceData", signature("missing"), function(desc="Unknown stock", ...){
 #' @description Methods for \link{ceData-class} object
 #' @param object,x,y,ceData \link{ceData-class} object
 #' @param subset an expression
+#' @param \\dots parameters
 #' 
 #' @docType methods
 #' @rdname ceData-methods
@@ -110,6 +106,8 @@ setGeneric("ce", function(object, ...){
 	}
 )
 
+#' @rdname ceData-methods
+#' @export
 setMethod("ce", signature("ceData"), function(object, ...){
 	object@ce
 	}
@@ -117,20 +115,8 @@ setMethod("ce", signature("ceData"), function(object, ...){
 
 #' @rdname ceData-methods
 #' @export
-setGeneric("desc", function(object, ...){
-	standardGeneric("desc")
-	}
-)
-
-setMethod("desc", signature("ceData"), function(object, ...){
-	object@desc
-	}
-)
-
-#' @rdname ceData-methods
-#' @export
 setMethod("head", signature("ceData"), function(x, ...){
-  object <- new("ceData",desc=x@desc)
+  object <- methods::new("ceData",desc=x@desc)
   object@ce <- head(x@ce)
   return(object)  
 	}
@@ -139,7 +125,7 @@ setMethod("head", signature("ceData"), function(x, ...){
 #' @rdname ceData-methods
 #' @export
 setMethod("tail", signature("ceData"), function(x, ...){
-  object <- new("ceData",desc=x@desc)
+  object <- methods::new("ceData",desc=x@desc)
   object@ce <- tail(x@ce)
   return(object)  
 	}
@@ -164,7 +150,7 @@ setMethod("dim", signature("ceData"), function(x){
 #' @rdname ceData-methods
 #' @export
 setMethod("rbind2", signature(x="ceData", y="ceData"), function(x,y){
-	df0 <- rbind2(ce(x),ce(y))
+	df0 <- methods::rbind2(ce(x),ce(y))
 	ceData(df0)
 
 })

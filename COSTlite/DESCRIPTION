@@ -1,4 +1,4 @@
-Package: ptyx
+Package: COSTlite 
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
@@ -12,3 +12,9 @@ RoxygenNote: 7.3.1
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Imports: 
+    data.table,
+    methods
+Depends: 
+    R (>= 2.10)
+LazyData: true

@@ -16,7 +16,11 @@ ceData(ce, ...)
 \arguments{
 \item{ce}{dataframe following the ce slot of a \link{ceData-class} object}
 
+\item{desc}{descriptor}
+
 \item{missing}{: create an empty \link{ceData-class} object}
+
+\item{\\dots}{parameters}
 }
 \description{
 ceData constructors

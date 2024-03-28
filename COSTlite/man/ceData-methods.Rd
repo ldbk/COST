@@ -3,7 +3,7 @@
 \docType{methods}
 \name{ce}
 \alias{ce}
-\alias{desc}
+\alias{ce,ceData-method}
 \alias{head,ceData-method}
 \alias{tail,ceData-method}
 \alias{summary,ceData-method}
@@ -14,7 +14,7 @@
 \usage{
 ce(object, ...)
 
-desc(object, ...)
+\S4method{ce}{ceData}(object, ...)
 
 \S4method{head}{ceData}(x, ...)
 
@@ -32,6 +32,8 @@ desc(object, ...)
 \item{object, x, y, ceData}{\link{ceData-class} object}
 
 \item{subset}{an expression}
+
+\item{\\dots}{parameters}
 }
 \description{
 Methods for \link{ceData-class} object

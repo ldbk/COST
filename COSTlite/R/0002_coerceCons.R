@@ -4,14 +4,16 @@
 #'
 #' @param object dataframe 
 #' @param refObject dataframe 
+#' @param \\dots parameters 
+#' @param data.frame parameters 
 #' @rdname coerceCons
-#' @docType methods
 #' @export
 setGeneric("coerceCons", function(object, refObject, ...){
 	standardGeneric("coerceCons")
 	}
 )
-#' rdname coerceCons
+
+#' @rdname coerceCons
 setMethod("coerceCons", signature("data.frame", "data.frame"), function(object, refObject, ...){
 
 	if(ncol(object)!=ncol(refObject)) stop("Both objects must have the same number of columns.\n")

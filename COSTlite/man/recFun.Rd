@@ -7,7 +7,11 @@
 recFun(df, field, rec)
 }
 \arguments{
-\item{df, }{fields, rec}
+\item{df}{dataframe}
+
+\item{field}{truc}
+
+\item{rec}{bidule}
 }
 \value{
 df

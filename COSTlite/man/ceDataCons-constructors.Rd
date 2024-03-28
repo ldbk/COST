@@ -22,6 +22,8 @@ ceDataCons(object, objStrat, ...)
 \item{objStrat}{stratification \link{strIni-class} object}
 
 \item{desc}{character vector of stock information}
+
+\item{\\dots}{parameters}
 }
 \description{
 ceDataCons constructors

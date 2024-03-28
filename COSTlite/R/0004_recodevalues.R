@@ -32,7 +32,9 @@ mapvalues<-function (x, from, to, warn_missing = FALSE)
 
 #' Internal recoding function
 #'
-#' @param df, fields, rec
+#' @param df dataframe
+#' @param field truc
+#' @param rec bidule
 #' @return df
 #' @export 
 recFun <- function(df,field,rec) {

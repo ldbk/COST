@@ -14,6 +14,9 @@ ceDataVal(object, ...)
 
 \S4method{ceDataVal}{missing}(desc = "Unknown stock", ...)
 }
+\arguments{
+\item{object, desc, \dots}{parameters}
+}
 \description{
 Fishing effort object
 }
